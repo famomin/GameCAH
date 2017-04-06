@@ -6,11 +6,8 @@ export default class Splash extends Component {
 
   render() {
     return (
-
-      <View style={styles.container}>
-        <Image source={cahImg} style={{ height: 500, width: 200 }}/>
-      </View>
-
+      <Image source={cahImg} style={styles.container}>
+      </Image>
     )
   }
 
@@ -33,9 +30,10 @@ export default class Splash extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    flexDirection: 'column',
+    width: undefined,
+    height: undefined,
+    backgroundColor:'transparent',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'rgba(76,217,175,1)'
-  }
+  },
 });
