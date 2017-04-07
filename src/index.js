@@ -17,7 +17,8 @@ export default class GameCAH extends Component {
             return (
                 <SliderEntry
                   key={`carousel-entry-${index}`}
-                  even={(index + 1) % 2 === 0}
+                  //Remove below code to force all white cards
+                  //even={(index + 1) % 2 === 0}
                   {...entry}
                 />
             );
@@ -83,8 +84,8 @@ export default class GameCAH extends Component {
                   indicatorStyle={'white'}
                   scrollEventThrottle={200}
                 >
-                    <Text style={styles.title}>Example 1</Text>
-                    <Text style={styles.subtitle}>No momentum | Scale | Opacity</Text>
+                    {/*<Text style={styles.title}>Example 1</Text>
+                    <Text style={styles.subtitle}>No momentum | Scale | Opacity</Text>*/}
                     { this.example1 }
                     {/*<Text style={styles.title}>Example 2</Text>
                     <Text style={styles.subtitle}>Momentum | Autoplay</Text>

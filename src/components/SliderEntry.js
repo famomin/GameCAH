@@ -24,16 +24,16 @@ export default class SliderEntry extends Component {
               style={styles.slideInnerContainer}
               onPress={() => { alert(`You've clicked '${title}'`); }}
               >
-                <View style={[styles.imageContainer, even ? styles.imageContainerEven : {}]}>
+                {/*<View style={[styles.imageContainer, even ? styles.imageContainerEven : {}]}>
                     <Image
                       source={{ uri: illustration }}
                       style={styles.image}
                     />
                     <View style={[styles.radiusMask, even ? styles.radiusMaskEven : {}]} />
-                </View>
+                </View>*/}
                 <View style={[styles.textContainer, even ? styles.textContainerEven : {}]}>
-                    { uppercaseTitle }
-                    <Text style={[styles.subtitle, even ? styles.subtitleEven : {}]} numberOfLines={2}>{ subtitle }</Text>
+                    {/*{ uppercaseTitle }*/}
+                    <Text style={[styles.subtitle, even ? styles.subtitleEven : {}]} numberOfLines={10}>{ uppercaseTitle }</Text>
                 </View>
             </TouchableOpacity>
         );
