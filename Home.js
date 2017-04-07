@@ -29,75 +29,71 @@
        return (
          <Image
            source={require('./images/cah.png')}
-           style={styles.container}>
+           style={styles.imageContainer}>
 
-           <View style={styles.row}>
-           </View>
-           <View style={styles.row}>
-           </View>
-           <View style={styles.row}>
-           </View>
-           <View style={styles.row}>
-           </View>
-           <View style={styles.row}>
-           </View>
-           <View style={styles.row}>
-           </View>
+           <View style={styles.container}>
+             <View style={styles.row}>
+               <Button block success onPress={() => this.press()}>
+                  <Text>Start New Game</Text>
+               </Button>
+             </View>
 
-           <View style={styles.row}>
-             <Button block success onPress={() => this.press()}>
-                <Text>Start New Game</Text>
-             </Button>
-           </View>
+             <View style={styles.row}>
+              <Button block danger onPress={() => this.press()}>
+                  <Text>Join Existing Game</Text>
+              </Button>
+             </View>
 
-           <View style={styles.row}>
-            <Button block danger onPress={() => this.press()}>
-                <Text>Join Existing Game</Text>
-            </Button>
-           </View>
+             <View style={styles.row}>
+              <Button block danger onPress={() => this.press()}>
+                  <Text>Join Existing Game</Text>
+              </Button>
+             </View>
 
-           <View style={styles.row}>
-            <Button block danger onPress={() => this.press()}>
-                <Text>Join Existing Game</Text>
-            </Button>
-           </View>
+             <View style={styles.row}>
+               <Button onPress={() => this.press()}>
+                  <Text>Page Get Code</Text>
+               </Button>
+             </View>
 
-           <View style={styles.row}>
-             <Button onPress={() => this.press()}>
-                <Text>Page Get Code</Text>
-             </Button>
-           </View>
+             <View style={styles.row}>
+               <Button onPress={() => this.press()}>
+                  <Text>Page Enter Code</Text>
+              </Button>
+             </View>
 
-           <View style={styles.row}>
-             <Button onPress={() => this.press()}>
-                <Text>Page Enter Code</Text>
-            </Button>
-           </View>
+             <View style={styles.row}>
+               <Button onPress={() => this.press('AllPlayers')}>
+                  <Text>All Players</Text>
+               </Button>
+             </View>
 
-           <View style={styles.row}>
-             <Button onPress={() => this.press('AllPlayers')}>
-                <Text>All Players</Text>
-             </Button>
-           </View>
+             <View style={styles.row}>
+               <Button onPress={() => this.press('GamePlay')}>
+                  <Text>Final Page</Text>
+              </Button>
+             </View>
 
-           <View style={styles.row}>
-             <Button onPress={() => this.press('GamePlay')}>
-                <Text>Final Page</Text>
-            </Button>
            </View>
-
         </Image>
        );
      }
    }
 const styles = StyleSheet.create({
-  container: {
+  imageContainer: {
     flex: 1,
     width: undefined,
     height: undefined,
     backgroundColor:'transparent',
-    justifyContent: 'center',
     alignItems: 'center',
+    justifyContent: 'center',
+  },
+  container: {
+    flex: 1,
+    backgroundColor:'transparent',
+    alignItems: 'center',
+    marginTop: 200,
+    justifyContent: 'center',
   },
   welcome: {
     fontSize: 20,
@@ -109,9 +105,8 @@ const styles = StyleSheet.create({
     color: '#333333',
     marginBottom: 5,
   },
-
   row: {
     flex: 1,
-    flexDirection: 'row'
+    alignItems: 'center',
   },
 });
