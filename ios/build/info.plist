@@ -3,8 +3,12 @@
 <plist version="1.0">
 <dict>
 	<key>LastAccessedDate</key>
+<<<<<<< Updated upstream
 	<date>2017-04-07T01:17:29Z</date>
+=======
+	<date>2017-04-07T01:20:48Z</date>
+>>>>>>> Stashed changes
 	<key>WorkspacePath</key>
-	<string>/Users/AzimMomin/Desktop/CodingBootCamp/Project-3/GameCAH/ios/GameCAH.xcodeproj</string>
+	<string>/Users/meganliken/GameCAH/ios/GameCAH.xcodeproj</string>
 </dict>
 </plist>
