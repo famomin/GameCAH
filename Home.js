@@ -22,48 +22,75 @@
           id: 3,
         });
      }
-     
+
    }
 
    render() {
        return (
          <Image
-           source={require('./images/mainbackground.jpeg')}
+           source={require('./images/cah.png')}
            style={styles.container}>
-           <Text style={styles.welcome}>
-             Welcome to {'\n'}CARDS AGAINST HUMANITY!
-           </Text>
-           <Text style={styles.instructions}>
-             To get started, please enter your name:
-           </Text>
-           <Text style={styles.instructions}>
-             Select Start to start new game,{'\n'}
-             or Join an existing game.
-           </Text>
-           <Button onPress={() => this.press()}>
-              <Text>Start New Game</Text>
-           </Button>
-           <Button onPress={() => this.press()}>
-              <Text>Join Existing Game</Text>
-          </Button>
-          <Button onPress={() => this.press()}>
-             <Text>Page Get Code</Text>
-          </Button>
-          <Button onPress={() => this.press()}>
-             <Text>Page Enter Code</Text>
-         </Button>
-         <Button onPress={() => this.press('AllPlayers')}>
-            <Text>All Players</Text>
-         </Button>
-         <Button onPress={() => this.press('GamePlay')}>
-            <Text>Final Page</Text>
-        </Button>
+
+           <View style={styles.row}>
+           </View>
+           <View style={styles.row}>
+           </View>
+           <View style={styles.row}>
+           </View>
+           <View style={styles.row}>
+           </View>
+           <View style={styles.row}>
+           </View>
+           <View style={styles.row}>
+           </View>
+
+           <View style={styles.row}>
+             <Button block success onPress={() => this.press()}>
+                <Text>Start New Game</Text>
+             </Button>
+           </View>
+
+           <View style={styles.row}>
+            <Button block danger onPress={() => this.press()}>
+                <Text>Join Existing Game</Text>
+            </Button>
+           </View>
+
+           <View style={styles.row}>
+            <Button block danger onPress={() => this.press()}>
+                <Text>Join Existing Game</Text>
+            </Button>
+           </View>
+
+           <View style={styles.row}>
+             <Button onPress={() => this.press()}>
+                <Text>Page Get Code</Text>
+             </Button>
+           </View>
+
+           <View style={styles.row}>
+             <Button onPress={() => this.press()}>
+                <Text>Page Enter Code</Text>
+            </Button>
+           </View>
+
+           <View style={styles.row}>
+             <Button onPress={() => this.press('AllPlayers')}>
+                <Text>All Players</Text>
+             </Button>
+           </View>
+
+           <View style={styles.row}>
+             <Button onPress={() => this.press('GamePlay')}>
+                <Text>Final Page</Text>
+            </Button>
+           </View>
+
         </Image>
        );
      }
    }
-
-   const styles = StyleSheet.create({
+const styles = StyleSheet.create({
   container: {
     flex: 1,
     width: undefined,
@@ -81,5 +108,10 @@
     textAlign: 'center',
     color: '#333333',
     marginBottom: 5,
+  },
+
+  row: {
+    flex: 1,
+    flexDirection: 'row'
   },
 });
