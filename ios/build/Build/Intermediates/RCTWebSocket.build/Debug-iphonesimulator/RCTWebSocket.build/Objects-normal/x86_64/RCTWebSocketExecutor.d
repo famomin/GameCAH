@@ -1,23 +1,23 @@
 dependencies: \
-  /Users/AzimMomin/Desktop/CodingBootCamp/Project-3/GameCAH/node_modules/react-native/Libraries/WebSocket/RCTWebSocketExecutor.m \
-  /Users/AzimMomin/Desktop/CodingBootCamp/Project-3/GameCAH/node_modules/react-native/Libraries/WebSocket/RCTWebSocketExecutor.h \
-  /Users/AzimMomin/Desktop/CodingBootCamp/Project-3/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTDefines.h \
-  /Users/AzimMomin/Desktop/CodingBootCamp/Project-3/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTJavaScriptExecutor.h \
-  /Users/AzimMomin/Desktop/CodingBootCamp/Project-3/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeModule.h \
-  /Users/AzimMomin/Desktop/CodingBootCamp/Project-3/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTInvalidating.h \
-  /Users/AzimMomin/Desktop/CodingBootCamp/Project-3/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTAssert.h \
-  /Users/AzimMomin/Desktop/CodingBootCamp/Project-3/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridge.h \
-  /Users/AzimMomin/Desktop/CodingBootCamp/Project-3/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeDelegate.h \
-  /Users/AzimMomin/Desktop/CodingBootCamp/Project-3/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTJavaScriptLoader.h \
-  /Users/AzimMomin/Desktop/CodingBootCamp/Project-3/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTFrameUpdate.h \
-  /Users/AzimMomin/Desktop/CodingBootCamp/Project-3/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTConvert.h \
-  /Users/AzimMomin/Desktop/CodingBootCamp/Project-3/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTAnimationType.h \
-  /Users/AzimMomin/Desktop/CodingBootCamp/Project-3/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBorderStyle.h \
-  /Users/AzimMomin/Desktop/CodingBootCamp/Project-3/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTLog.h \
-  /Users/AzimMomin/Desktop/CodingBootCamp/Project-3/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTPointerEvents.h \
-  /Users/AzimMomin/Desktop/CodingBootCamp/Project-3/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTTextDecorationLineType.h \
-  /Users/AzimMomin/Desktop/CodingBootCamp/Project-3/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/Yoga.h \
-  /Users/AzimMomin/Desktop/CodingBootCamp/Project-3/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGEnums.h \
-  /Users/AzimMomin/Desktop/CodingBootCamp/Project-3/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGMacros.h \
-  /Users/AzimMomin/Desktop/CodingBootCamp/Project-3/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTUtils.h \
-  /Users/AzimMomin/Desktop/CodingBootCamp/Project-3/GameCAH/node_modules/react-native/Libraries/WebSocket/RCTSRWebSocket.h
+  /Users/FarasMomin/Documents/Coding\ Bootcamp/React\ Native\ Apps/GameCAH/node_modules/react-native/Libraries/WebSocket/RCTWebSocketExecutor.m \
+  /Users/FarasMomin/Documents/Coding\ Bootcamp/React\ Native\ Apps/GameCAH/node_modules/react-native/Libraries/WebSocket/RCTWebSocketExecutor.h \
+  /Users/FarasMomin/Documents/Coding\ Bootcamp/React\ Native\ Apps/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTDefines.h \
+  /Users/FarasMomin/Documents/Coding\ Bootcamp/React\ Native\ Apps/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTJavaScriptExecutor.h \
+  /Users/FarasMomin/Documents/Coding\ Bootcamp/React\ Native\ Apps/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeModule.h \
+  /Users/FarasMomin/Documents/Coding\ Bootcamp/React\ Native\ Apps/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTInvalidating.h \
+  /Users/FarasMomin/Documents/Coding\ Bootcamp/React\ Native\ Apps/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTAssert.h \
+  /Users/FarasMomin/Documents/Coding\ Bootcamp/React\ Native\ Apps/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridge.h \
+  /Users/FarasMomin/Documents/Coding\ Bootcamp/React\ Native\ Apps/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeDelegate.h \
+  /Users/FarasMomin/Documents/Coding\ Bootcamp/React\ Native\ Apps/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTJavaScriptLoader.h \
+  /Users/FarasMomin/Documents/Coding\ Bootcamp/React\ Native\ Apps/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTFrameUpdate.h \
+  /Users/FarasMomin/Documents/Coding\ Bootcamp/React\ Native\ Apps/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTConvert.h \
+  /Users/FarasMomin/Documents/Coding\ Bootcamp/React\ Native\ Apps/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTAnimationType.h \
+  /Users/FarasMomin/Documents/Coding\ Bootcamp/React\ Native\ Apps/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBorderStyle.h \
+  /Users/FarasMomin/Documents/Coding\ Bootcamp/React\ Native\ Apps/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTLog.h \
+  /Users/FarasMomin/Documents/Coding\ Bootcamp/React\ Native\ Apps/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTPointerEvents.h \
+  /Users/FarasMomin/Documents/Coding\ Bootcamp/React\ Native\ Apps/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTTextDecorationLineType.h \
+  /Users/FarasMomin/Documents/Coding\ Bootcamp/React\ Native\ Apps/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/Yoga.h \
+  /Users/FarasMomin/Documents/Coding\ Bootcamp/React\ Native\ Apps/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGEnums.h \
+  /Users/FarasMomin/Documents/Coding\ Bootcamp/React\ Native\ Apps/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGMacros.h \
+  /Users/FarasMomin/Documents/Coding\ Bootcamp/React\ Native\ Apps/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTUtils.h \
+  /Users/FarasMomin/Documents/Coding\ Bootcamp/React\ Native\ Apps/GameCAH/node_modules/react-native/Libraries/WebSocket/RCTSRWebSocket.h
