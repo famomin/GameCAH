@@ -22,6 +22,11 @@
           id: 3,
         });
      }
+     else if(Page === 'CardSlider'){
+        this.props.navigator.push({
+          id: 6,
+        });
+     }
 
    }
 
@@ -74,7 +79,16 @@
               </Button>
              </View>
 
+             <View style={styles.row}>
+               <Button onPress={() => this.press('CardSlider')}>
+                  <Text>CardSlider</Text>
+              </Button>
+             </View>
+
            </View>
+
+
+
         </Image>
        );
      }

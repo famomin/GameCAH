@@ -16,6 +16,7 @@ import NewGame from './NewGame';
 //import JoinGame from './JoinGame';
 import Splash from './Splash';
 import GamePlay from './GamePlay';
+import Root from './src/index';
 
 class GameCAH extends Component {
 
@@ -36,6 +37,9 @@ class GameCAH extends Component {
     // else if (route.id === 5) {
     //   return <JoinGame navigator={navigator} />
     // }
+    else if (route.id === 6) {
+      return <Root navigator={navigator} />
+    }
   }
 
   // The configureScene function allows us to change the animation properties of a scene
