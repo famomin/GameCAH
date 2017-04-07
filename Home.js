@@ -11,10 +11,18 @@
  export default class Home extends Component {
    // The press function takes in an argument (movie name) and pushes to the navigator the individual movie page
    // It also passes along the name of the movie which will be used fetch information from the OMDB API
-   press() {
-     this.props.navigator.push({
-       id: 2,
-     });
+   press(Page) {
+     if(Page === 'GamePlay'){
+        this.props.navigator.push({
+          id: 4,
+        });
+     }
+     else if(Page === 'AllPlayers'){
+        this.props.navigator.push({
+          id: 3,
+        });
+     }
+
    }
 
    render() {
@@ -67,13 +75,13 @@
            </View>
 
            <View style={styles.row}>
-             <Button onPress={() => this.press()}>
+             <Button onPress={() => this.press('AllPlayers')}>
                 <Text>All Players</Text>
              </Button>
            </View>
 
            <View style={styles.row}>
-             <Button onPress={() => this.press()}>
+             <Button onPress={() => this.press('GamePlay')}>
                 <Text>Final Page</Text>
             </Button>
            </View>
@@ -82,8 +90,7 @@
        );
      }
    }
-
-   const styles = StyleSheet.create({
+const styles = StyleSheet.create({
   container: {
     flex: 1,
     width: undefined,

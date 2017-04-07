@@ -1,6 +1,6 @@
 dependencies: \
-  /Users/FarasMomin/Documents/Coding\ Bootcamp/React\ Native\ Apps/GameCAH/node_modules/react-native/React/Base/RCTParserUtils.m \
-  /Users/FarasMomin/Documents/Coding\ Bootcamp/React\ Native\ Apps/GameCAH/node_modules/react-native/React/Base/RCTParserUtils.h \
-  /Users/FarasMomin/Documents/Coding\ Bootcamp/React\ Native\ Apps/GameCAH/node_modules/react-native/React/Base/RCTDefines.h \
-  /Users/FarasMomin/Documents/Coding\ Bootcamp/React\ Native\ Apps/GameCAH/node_modules/react-native/React/Base/RCTLog.h \
-  /Users/FarasMomin/Documents/Coding\ Bootcamp/React\ Native\ Apps/GameCAH/node_modules/react-native/React/Base/RCTAssert.h
+  /Users/AzimMomin/Desktop/CodingBootCamp/Project-3/GameCAH/node_modules/react-native/React/Base/RCTParserUtils.m \
+  /Users/AzimMomin/Desktop/CodingBootCamp/Project-3/GameCAH/node_modules/react-native/React/Base/RCTParserUtils.h \
+  /Users/AzimMomin/Desktop/CodingBootCamp/Project-3/GameCAH/node_modules/react-native/React/Base/RCTDefines.h \
+  /Users/AzimMomin/Desktop/CodingBootCamp/Project-3/GameCAH/node_modules/react-native/React/Base/RCTLog.h \
+  /Users/AzimMomin/Desktop/CodingBootCamp/Project-3/GameCAH/node_modules/react-native/React/Base/RCTAssert.h

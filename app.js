@@ -13,7 +13,9 @@ import {
 // Importing scenes for our app
 import Home from './Home';
 import NewGame from './NewGame';
+import JoinGame from './JoinGame';
 import Splash from './Splash';
+import GamePlay from './GamePlay';
 
 class GameCAH extends Component {
 
@@ -27,6 +29,12 @@ class GameCAH extends Component {
     }
     else if (route.id === 3) {
       return <Splash navigator={navigator} />
+    }
+    else if (route.id === 4) {
+      return <GamePlay navigator={navigator} />
+    }
+    else if (route.id === 5) {
+      return <JoinGame navigator={navigator} />
     }
   }
 
