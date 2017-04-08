@@ -28,6 +28,11 @@
           id: 6,
         });
      }
+     else if(Page === 'NewGame'){
+        this.props.navigator.push({
+          id: 2,
+        });
+     }
 
    }
 
@@ -52,7 +57,7 @@
                 </Form>
 
               <Row>
-                  <Button block success onPress={() => this.press()}>
+                  <Button block success onPress={() => this.press('NewGame')}>
                      <Text>Start New Game</Text>
                   </Button>
               </Row>
