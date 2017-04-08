@@ -17,6 +17,10 @@ import NewGame from './NewGame';
 import Splash from './Splash';
 import GamePlay from './GamePlay';
 import Root from './src/index';
+// importing firebase
+// import * as firebase from "firebase";
+// import keys from "./keys.js";
+// firebase.initializeApp(keys);
 
 class GameCAH extends Component {
 

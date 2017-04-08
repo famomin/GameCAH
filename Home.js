@@ -6,7 +6,8 @@
 
  import React, { Component } from 'react';
  import { AppRegistry, StyleSheet, Modal, Image, Platform, Navigator, TouchableHighlight } from 'react-native';
- import { Spinner, Text, View, Content, Container, Header, Title, Button, Icon, InputGroup, Input, ListItem, List, Radio, CheckBox, Thumbnail, Card, CardItem, H3 } from 'native-base';
+ import { Spinner, Text, View, Content, Container, Header, Title, Button, Icon, InputGroup, ListItem, List, Radio, CheckBox, Thumbnail, Card, CardItem, H3, Form, Item, Input } from 'native-base';
+ import { Col, Row, Grid } from 'react-native-easy-grid';
 
  export default class Home extends Component {
    // The press function takes in an argument (movie name) and pushes to the navigator the individual movie page
@@ -27,6 +28,11 @@
           id: 6,
         });
      }
+     else if(Page === 'NewGame'){
+        this.props.navigator.push({
+          id: 2,
+        });
+     }
 
    }
 
@@ -36,58 +42,63 @@
            source={require('./images/cah.png')}
            style={styles.imageContainer}>
 
-           <View style={styles.container}>
-             <View style={styles.row}>
-               <Button block success onPress={() => this.press()}>
-                  <Text>Start New Game</Text>
-               </Button>
-             </View>
+           <Grid>
+              <Row></Row>
+              <Row></Row>
+              <Row></Row>
+              <Row></Row>
+              <Row></Row>
+              <Row></Row>
 
-             <View style={styles.row}>
-              <Button block danger onPress={() => this.press()}>
-                  <Text>Join Existing Game</Text>
-              </Button>
-             </View>
+                <Form style={{backgroundColor:'#eeeeee'}}>
+                    <Item>
+                        <Input placeholder="Enter your name" />
+                    </Item>
+                </Form>
 
-             <View style={styles.row}>
-              <Button block danger onPress={() => this.press()}>
-                  <Text>Join Existing Game</Text>
-              </Button>
-             </View>
+              <Row>
+                  <Button block success onPress={() => this.press('NewGame')}>
+                     <Text>Start New Game</Text>
+                  </Button>
+              </Row>
 
-             <View style={styles.row}>
-               <Button onPress={() => this.press()}>
-                  <Text>Page Get Code</Text>
-               </Button>
-             </View>
+              <Row>
+                 <Button block danger onPress={() => this.press()}>
+                     <Text>Join Existing Game</Text>
+                 </Button>
+              </Row>
 
-             <View style={styles.row}>
-               <Button onPress={() => this.press()}>
-                  <Text>Page Enter Code</Text>
-              </Button>
-             </View>
+              <Row>
+                  <Button onPress={() => this.press()}>
+                     <Text>Page Get Code</Text>
+                  </Button>
+              </Row>
 
-             <View style={styles.row}>
-               <Button onPress={() => this.press('AllPlayers')}>
-                  <Text>All Players</Text>
-               </Button>
-             </View>
+              <Row>
+                  <Button onPress={() => this.press()}>
+                     <Text>Page Enter Code</Text>
+                 </Button>
+              </Row>
 
-             <View style={styles.row}>
-               <Button onPress={() => this.press('GamePlay')}>
-                  <Text>Final Page</Text>
-              </Button>
-             </View>
+              <Row>
+                  <Button onPress={() => this.press('AllPlayers')}>
+                     <Text>All Players</Text>
+                  </Button>
+              </Row>
 
-             <View style={styles.row}>
-               <Button onPress={() => this.press('CardSlider')}>
-                  <Text>CardSlider</Text>
-              </Button>
-             </View>
+              <Row>
+                  <Button onPress={() => this.press('GamePlay')}>
+                     <Text>Final Page</Text>
+                 </Button>
+              </Row>
 
-           </View>
+              <Row>
+                  <Button onPress={() => this.press('CardSlider')}>
+                     <Text>CardSlider</Text>
+                 </Button>
+              </Row>
 
-
+          </Grid>
 
         </Image>
        );

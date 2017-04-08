@@ -7,9 +7,11 @@
     "test": "jest"
   },
   "dependencies": {
+    "firebase": "^3.7.5",
     "native-base": "^2.1.1",
     "react": "16.0.0-alpha.6",
     "react-native": "0.43.1",
+    "react-native-easy-grid": "^0.1.8",
     "react-native-snap-carousel": "^2.1.1"
   },
   "devDependencies": {

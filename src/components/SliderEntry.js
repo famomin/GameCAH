@@ -19,23 +19,27 @@ export default class SliderEntry extends Component {
         ) : false;
 
         return (
-            <TouchableOpacity
-              activeOpacity={0.7}
-              style={styles.slideInnerContainer}
-              onPress={() => { alert(`You've clicked '${title}'`); }}
-              >
-                <View style={[styles.imageContainer, even ? styles.imageContainerEven : {}]}>
-                    <Image
-                      source={{ uri: illustration }}
-                      style={styles.image}
-                    />
-                    <View style={[styles.radiusMask, even ? styles.radiusMaskEven : {}]} />
-                </View>
-                <View style={[styles.textContainer, even ? styles.textContainerEven : {}]}>
-                    { uppercaseTitle }
-                    <Text style={[styles.subtitle, even ? styles.subtitleEven : {}]} numberOfLines={2}>{ subtitle }</Text>
-                </View>
-            </TouchableOpacity>
+
+
+              <View>
+                <TouchableOpacity
+                  activeOpacity={0.7}
+                  style={styles.slideInnerContainer}
+                  // onPress={() => { alert(`You've clicked '${title}'`); }}
+                  >
+                    {/*<View style={[styles.imageContainer, even ? styles.imageContainerEven : {}]}>
+                        <Image
+                          source={{ uri: illustration }}
+                          style={styles.image}
+                        />
+                        <View style={[styles.radiusMask, even ? styles.radiusMaskEven : {}]} />
+                    </View>*/}
+                    <View style={[styles.textContainer, even ? styles.textContainerEven : {}]}>
+                        {/*{ uppercaseTitle }*/}
+                        <Text style={[styles.subtitle, even ? styles.subtitleEven : {}]} numberOfLines={10}>{ uppercaseTitle }</Text>
+                    </View>
+                </TouchableOpacity>
+              </View>
         );
     }
 }

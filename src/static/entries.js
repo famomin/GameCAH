@@ -1,8 +1,8 @@
 export const ENTRIES1 = [
     {
-        title: 'Beautiful and dramatic Antelope Canyon',
+        title: 'Dropping a chandelier on your enemies and riding the rope up.',
         subtitle: 'Lorem ipsum dolor sit amet et nuncat mergitur',
-        illustration: 'http://i.imgur.com/UYiroysl.jpg'
+        illustration: 'https://www.w3schools.com/css/img_fjords.jpg'
     },
     {
         title: 'Earlier this morning, NYC',
