@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View, ScrollView, Text, StatusBar } from 'react-native';
 import Carousel from 'react-native-snap-carousel';
-import { Button, Footer } from 'native-base';
+import { Button, Footer,Container, Content } from 'native-base';
 import { Col, Row, Grid } from 'react-native-easy-grid';
 import { sliderWidth, itemWidth } from 'GameCAH/src/styles/SliderEntry.style';
 import SliderEntry from 'GameCAH/src/components/SliderEntry';
@@ -71,55 +71,60 @@ export default class GameCAH extends Component {
 
     render () {
         return (
-          <Grid>
-            <Row size={10}>
-              <Col>
-                <Text>Name</Text>
-              </Col>
+        <Container>
+          <Content>
+            <Grid>
+              <Row size={10}>
+                <Col>
+                  <Text>Name</Text>
+                </Col>
 
-              <Col>
-                <Text>Time Left</Text>
-              </Col>
+                <Col>
+                  <Text>Time Left</Text>
+                </Col>
 
-              <Col>
-                <Text>Score</Text>
-              </Col>
-            </Row>
+                <Col>
+                  <Text>Score</Text>
+                </Col>
+              </Row>
 
-            <Row size={35}>
-              <Text>Some Text</Text>
-            </Row>
+              <Row size={35}>
+                <Text>Some Text</Text>
+              </Row>
 
-            <Row size={50}>
-                  <StatusBar
-                    translucent={true}
-                    backgroundColor={'rgba(0, 0, 0, 0.3)'}
-                    barStyle={'light-content'}
-                  />
-                  <View style={styles.colorsContainer}>
-                      <View style={styles.color1} />
-                      <View style={styles.color2} />
-                  </View>
-                  <ScrollView
-                    style={styles.scrollview}
-                    indicatorStyle={'white'}
-                    scrollEventThrottle={200}
-                  >
-                      {/*<Text style={styles.title}>Example 1</Text>
-                      <Text style={styles.subtitle}>No momentum | Scale | Opacity</Text>*/}
-                      { this.example1 }
-                      {/*<Text style={styles.title}>Example 2</Text>
-                      <Text style={styles.subtitle}>Momentum | Autoplay</Text>
-                      { this.example2 }*/}
-                  </ScrollView>
+              <Row size={50}>
+                    <StatusBar
+                      translucent={true}
+                      backgroundColor={'rgba(0, 0, 0, 0.3)'}
+                      barStyle={'light-content'}
+                    />
+                    <View style={styles.colorsContainer}>
+                        <View style={styles.color1} />
+                        <View style={styles.color2} />
+                    </View>
+                    <ScrollView
+                      style={styles.scrollview}
+                      indicatorStyle={'white'}
+                      scrollEventThrottle={200}
+                    >
+                        {/*<Text style={styles.title}>Example 1</Text>
+                        <Text style={styles.subtitle}>No momentum | Scale | Opacity</Text>*/}
+                        { this.example1 }
+                        {/*<Text style={styles.title}>Example 2</Text>
+                        <Text style={styles.subtitle}>Momentum | Autoplay</Text>
+                        { this.example2 }*/}
+                    </ScrollView>
 
-            </Row>
-            <Row size={10}>
-              <Button block success onPress={() => this.press()}>
-                 <Text>Submit</Text>
-              </Button>
-            </Row>
-          </Grid>
+              </Row>
+              <Row size={10}>
+                <Button block success onPress={() => this.press()}>
+                   <Text>Submit</Text>
+                </Button>
+              </Row>
+            </Grid>
+          </Content>
+        </Container>
+
         );
     }
 }
