@@ -5,7 +5,7 @@
  import { Spinner, Text, View, Content, Container, Header, Title, Button, Icon, InputGroup, ListItem, List, Radio, CheckBox, Thumbnail, Card, CardItem, H3, Form, Item, Input } from 'native-base';
  import { Col, Row, Grid } from 'react-native-easy-grid';
 
- export default class JoinGame extends Component {
+ export default class NewGame extends Component {
    // The press function takes in an argument (movie name) and pushes to the navigator the individual movie page
    // It also passes along the name of the movie which will be used fetch information from the OMDB API
   
@@ -24,12 +24,12 @@
 
                 <Form style={{backgroundColor:'#eeeeee'}}>
                     <Item>
-                        <Input placeholder="Generated Code" />
+                        <Input placeholder="Enter Code Here" />
                     </Item>
                 </Form>
               <Row></Row>
               <Row>
-                  <Button block success onPress={() => this.press('NewGame')}>
+                  <Button block success onPress={() => this.press('JoinGame')}>
                      <Text>Start New Game</Text>
                   </Button>
               </Row>
