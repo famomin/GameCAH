@@ -17,9 +17,14 @@
 		7T5ktvvXyDSJtKLhs9ZTloNZpJc=
 		</data>
 		<key>Base.lproj/LaunchScreen.nib</key>
-		<data>
-		YA5qOWMFsQHj5TnOTbRd+Tn3P6k=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			anRjhcWeI+YK2XcIq6ZqxsV0yAc=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>Comic Sans MS.ttf</key>
 		<data>
 		7E3iKa8HKXylvcnkb6TbSjlU7IY=
@@ -267,7 +272,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		x/VPXDN2dfarfj/9I4xfHEJxFTc=
+		yJhwSumXUnY1MX+gCLhWKbnywgs=
 		</data>
 		<key>Ionicons.ttf</key>
 		<data>
@@ -433,12 +438,14 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			YA5qOWMFsQHj5TnOTbRd+Tn3P6k=
+			anRjhcWeI+YK2XcIq6ZqxsV0yAc=
 			</data>
 			<key>hash2</key>
 			<data>
-			1JsC3tBBsyxbhoekKeX7Vxv3brv1h67RMPzIHSaFSPQ=
+			dxYzamHUI6JqYuuKYZMbE6JoeyNoucI+81NW+tETsS8=
 			</data>
+			<key>optional</key>
+			<true/>
 		</dict>
 		<key>Comic Sans MS.ttf</key>
 		<dict>
@@ -1456,11 +1463,6 @@
 			<key>weight</key>
 			<real>1100</real>
 		</dict>
-		<key>^Base\.lproj/</key>
-		<dict>
-			<key>weight</key>
-			<real>1010</real>
-		</dict>
 		<key>^version.plist$</key>
 		<true/>
 	</dict>
@@ -1505,11 +1507,6 @@
 			<true/>
 			<key>weight</key>
 			<real>1100</real>
-		</dict>
-		<key>^Base\.lproj/</key>
-		<dict>
-			<key>weight</key>
-			<real>1010</real>
 		</dict>
 		<key>^Info\.plist$</key>
 		<dict>

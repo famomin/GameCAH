@@ -85,5 +85,29 @@ export default StyleSheet.create({
     },
     subtitleEven: {
         color: 'rgba(255, 255, 255, 0.7)'
+    },
+    singleCard: {
+        width: 150,
+        height: 200,
+        justifyContent: 'center',
+        paddingTop: 20 - entryBorderRadius,
+        paddingBottom: 20,
+        paddingHorizontal: 16,
+        backgroundColor: 'black',
+        borderTopLeftRadius: entryBorderRadius,
+        borderTopRightRadius: entryBorderRadius,
+        borderBottomLeftRadius: entryBorderRadius,
+        borderBottomRightRadius: entryBorderRadius
+    },
+    whiteTitle: {
+        color: 'white',
+        fontSize: 16,
+        fontWeight: 'bold',
+        letterSpacing: 0.5,
+        textAlign: 'center'
+    },
+    centerC: {
+        justifyContent: 'center',
+        alignItems: 'center'
     }
 });
