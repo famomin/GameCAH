@@ -3,7 +3,11 @@
 <plist version="1.0">
 <dict>
  <key>clang_version</key>
+<<<<<<< HEAD
 <string>Apple LLVM version 8.1.0 (clang-802.0.38)</string>
+=======
+<string>Apple LLVM version 8.0.0 (clang-800.0.42.1)</string>
+>>>>>>> 204aa89f9bd44b6c42864c2cfb901df16527dcf7
  <key>files</key>
  <array>
  </array>

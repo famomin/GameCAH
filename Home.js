@@ -33,6 +33,11 @@
           id: 2,
         });
      }
+     else if(Page === 'JoinGame'){
+        this.props.navigator.push({
+          id: 5,
+        });
+     }
 
    }
 
@@ -63,7 +68,7 @@
               </Row>
 
               <Row>
-                 <Button block danger onPress={() => this.press()}>
+                 <Button block danger onPress={() => this.press('JoinGame')}>
                      <Text>Join Existing Game</Text>
                  </Button>
               </Row>
