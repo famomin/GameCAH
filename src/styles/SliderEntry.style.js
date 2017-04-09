@@ -86,6 +86,9 @@ export default StyleSheet.create({
     subtitleEven: {
         color: 'rgba(255, 255, 255, 0.7)'
     },
+    topGameBar: {
+      textAlign: 'center',
+    },
     singleCard: {
         width: 150,
         height: 200,

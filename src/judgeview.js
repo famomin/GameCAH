@@ -11,14 +11,6 @@ import { ENTRIES1, ENTRIES2 } from 'GameCAH/src/static/entries';
 
 export default class GameCAH extends Component {
 
-  press(Page) {
-    if(Page === 'JudgeView'){
-       this.props.navigator.push({
-         id: 7,
-       });
-    }
-  }
-
     getSlides (entries) {
         if (!entries) {
             return false;
@@ -127,19 +119,9 @@ export default class GameCAH extends Component {
                         indicatorStyle={'white'}
                         scrollEventThrottle={200}
                     >
-                        {/*<Text style={styles.title}>Example 1</Text>
-                        <Text style={styles.subtitle}>No momentum | Scale | Opacity</Text>*/}
-                        { this.example1 }
-                        {/*<Text style={styles.title}>Example 2</Text>
-                        <Text style={styles.subtitle}>Momentum | Autoplay</Text>
-                        { this.example2 }*/}
+
                     </ScrollView>
 
-                </Row>
-                <Row size={10}>
-                <Button full success onPress={() => this.press('JudgeView')}>
-                    <Text>Submit</Text>
-                </Button>
                 </Row>
             </Grid>
         );
