@@ -1,11 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { View, ScrollView, Text, StatusBar } from 'react-native';
 import Carousel from 'react-native-snap-carousel';
-<<<<<<< HEAD
-import { Button, Footer,Container, Content } from 'native-base';
-=======
 import { Button, Footer, Container, Content } from 'native-base';
->>>>>>> 204aa89f9bd44b6c42864c2cfb901df16527dcf7
 import { Col, Row, Grid } from 'react-native-easy-grid';
 import { sliderWidth, itemWidth } from 'GameCAH/src/styles/SliderEntry.style';
 import SliderEntry from 'GameCAH/src/components/SliderEntry';
@@ -82,34 +78,6 @@ export default class GameCAH extends Component {
         ) : false;
 
         return (
-<<<<<<< HEAD
-        <Container>
-          <Content>
-            <Grid>
-              <Row size={10}>
-                <Col>
-                  <Text>Name</Text>
-                </Col>
-
-                <Col>
-                  <Text>Time Left</Text>
-                </Col>
-
-                <Col>
-                  <Text>Score</Text>
-                </Col>
-              </Row>
-
-              <Row size={35}>
-                <Text>Some Text</Text>
-              </Row>
-
-              <Row size={50}>
-                    <StatusBar
-                      translucent={true}
-                      backgroundColor={'rgba(0, 0, 0, 0.3)'}
-                      barStyle={'light-content'}
-=======
             <Grid>
                 <View style={styles.colorsContainer}>
                         <View style={styles.color1} />
@@ -141,22 +109,15 @@ export default class GameCAH extends Component {
                         translucent={true}
                         backgroundColor={'rgba(0, 0, 0, 0.3)'}
                         barStyle={'light-content'}
->>>>>>> 204aa89f9bd44b6c42864c2cfb901df16527dcf7
                     />
                     <View style={styles.colorsContainer}>
                         <View style={styles.color1} />
                         <View style={styles.color2} />
                     </View>
                     <ScrollView
-<<<<<<< HEAD
-                      style={styles.scrollview}
-                      indicatorStyle={'white'}
-                      scrollEventThrottle={200}
-=======
                         style={styles.scrollview}
                         indicatorStyle={'white'}
                         scrollEventThrottle={200}
->>>>>>> 204aa89f9bd44b6c42864c2cfb901df16527dcf7
                     >
                         {/*<Text style={styles.title}>Example 1</Text>
                         <Text style={styles.subtitle}>No momentum | Scale | Opacity</Text>*/}
@@ -165,19 +126,6 @@ export default class GameCAH extends Component {
                         <Text style={styles.subtitle}>Momentum | Autoplay</Text>
                         { this.example2 }*/}
                     </ScrollView>
-<<<<<<< HEAD
-
-              </Row>
-              <Row size={10}>
-                <Button block success onPress={() => this.press()}>
-                   <Text>Submit</Text>
-                </Button>
-              </Row>
-            </Grid>
-          </Content>
-        </Container>
-
-=======
 
                 </Row>
                 <Row size={10}>
@@ -185,8 +133,7 @@ export default class GameCAH extends Component {
                     <Text>Submit</Text>
                 </Button>
                 </Row>
-            </Grid> 
->>>>>>> 204aa89f9bd44b6c42864c2cfb901df16527dcf7
+            </Grid>
         );
     }
 }
