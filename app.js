@@ -17,6 +17,8 @@ import JoinGame from './JoinGame';
 import Splash from './Splash';
 import GamePlay from './GamePlay';
 import Root from './src/index';
+import JudgeView from './src/judgeview.js';
+
 // importing firebase
 // import * as firebase from "firebase";
 // import keys from "./keys.js";
@@ -43,6 +45,9 @@ class GameCAH extends Component {
     }
     else if (route.id === 6) {
       return <Root navigator={navigator} />
+    }
+    else if (route.id === 7) {
+      return <JudgeView navigator={navigator} />
     }
   }
 
