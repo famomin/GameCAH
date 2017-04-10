@@ -88,6 +88,14 @@ export default StyleSheet.create({
     },
     topGameBar: {
       textAlign: 'center',
+      marginTop: 10
+
+    },
+    timerBar: {
+      textAlign: 'center',
+      fontWeight: 'bold',
+      fontSize: 18,
+      marginTop: 25
     },
     singleCard: {
         width: 150,

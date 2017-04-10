@@ -98,7 +98,7 @@ export default class GameCAH extends Component {
                     </Col>
 
                     <Col>
-                        <Text style={styles1.topGameBar}>Time Left</Text>
+                        <Text style={styles1.timerBar}>Time Left</Text>
                     </Col>
 
                     <Col>
@@ -136,7 +136,7 @@ export default class GameCAH extends Component {
                     </ScrollView>
 
                 </Row>
-                <Row size={10}>
+                <Row size={10} style={styles1.centerC}>
                 <Button full success onPress={() => this.press('JudgeView')}>
                     <Text>Submit</Text>
                 </Button>

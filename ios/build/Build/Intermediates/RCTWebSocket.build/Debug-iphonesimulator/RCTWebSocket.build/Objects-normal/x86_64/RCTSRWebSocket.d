@@ -1,6 +1,6 @@
 dependencies: \
-  /Users/AzimMomin/Desktop/CodingBootCamp/Project-3/GameCAH/node_modules/react-native/Libraries/WebSocket/RCTSRWebSocket.m \
-  /Users/AzimMomin/Desktop/CodingBootCamp/Project-3/GameCAH/node_modules/react-native/Libraries/WebSocket/RCTSRWebSocket.h \
-  /Users/AzimMomin/Desktop/CodingBootCamp/Project-3/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTAssert.h \
-  /Users/AzimMomin/Desktop/CodingBootCamp/Project-3/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTDefines.h \
-  /Users/AzimMomin/Desktop/CodingBootCamp/Project-3/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTLog.h
+  /Users/meganliken/GameCAH/node_modules/react-native/Libraries/WebSocket/RCTSRWebSocket.m \
+  /Users/meganliken/GameCAH/node_modules/react-native/Libraries/WebSocket/RCTSRWebSocket.h \
+  /Users/meganliken/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTAssert.h \
+  /Users/meganliken/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTDefines.h \
+  /Users/meganliken/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTLog.h

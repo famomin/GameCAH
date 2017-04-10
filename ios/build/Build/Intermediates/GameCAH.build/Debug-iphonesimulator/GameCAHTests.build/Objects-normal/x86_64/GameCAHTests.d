@@ -1,5 +1,4 @@
-dependencies: \
-  /Users/AzimMomin/Desktop/CodingBootCamp/Project-3/GameCAH/ios/GameCAHTests/GameCAHTests.m \
+dependencies: /Users/meganliken/GameCAH/ios/GameCAHTests/GameCAHTests.m \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Modules/module.modulemap \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIRemote.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIKeyboardKeys.h \
@@ -29,13 +28,13 @@ dependencies: \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestErrors.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestDefines.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTest.h \
-  /Users/AzimMomin/Desktop/CodingBootCamp/Project-3/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTLog.h \
-  /Users/AzimMomin/Desktop/CodingBootCamp/Project-3/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTAssert.h \
-  /Users/AzimMomin/Desktop/CodingBootCamp/Project-3/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTDefines.h \
-  /Users/AzimMomin/Desktop/CodingBootCamp/Project-3/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTRootView.h \
-  /Users/AzimMomin/Desktop/CodingBootCamp/Project-3/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridge.h \
-  /Users/AzimMomin/Desktop/CodingBootCamp/Project-3/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeDelegate.h \
-  /Users/AzimMomin/Desktop/CodingBootCamp/Project-3/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTJavaScriptLoader.h \
-  /Users/AzimMomin/Desktop/CodingBootCamp/Project-3/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeModule.h \
-  /Users/AzimMomin/Desktop/CodingBootCamp/Project-3/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTFrameUpdate.h \
-  /Users/AzimMomin/Desktop/CodingBootCamp/Project-3/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTInvalidating.h
+  /Users/meganliken/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTLog.h \
+  /Users/meganliken/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTAssert.h \
+  /Users/meganliken/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTDefines.h \
+  /Users/meganliken/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTRootView.h \
+  /Users/meganliken/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridge.h \
+  /Users/meganliken/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeDelegate.h \
+  /Users/meganliken/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTJavaScriptLoader.h \
+  /Users/meganliken/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeModule.h \
+  /Users/meganliken/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTFrameUpdate.h \
+  /Users/meganliken/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTInvalidating.h

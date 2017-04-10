@@ -49,5 +49,5 @@ export default StyleSheet.create({
         marginBottom: 30
     },
     sliderContainer: {
-    }
+    },
 });
