@@ -9,6 +9,16 @@ import {
   AppRegistry,
   Navigator
 } from 'react-native';
+import * as firebase from 'firebase';
+
+var config = {
+    apiKey: "AIzaSyCTKP5CD183HRaUy3NnS13iHAQNFJab8oo",
+    authDomain: "project3database.firebaseapp.com",
+    databaseURL: "https://project3database.firebaseio.com",
+    storageBucket: "project3database.appspot.com",
+  };
+  firebase.initializeApp(config);
+
 
 // Importing scenes for our app
 import Home from './Home';
