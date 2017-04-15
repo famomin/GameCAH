@@ -73,7 +73,7 @@
                  </Button>
               </Row>
 
-              <Row>
+              {/* <Row>
                   <Button onPress={() => this.press()}>
                      <Text>Page Get Code</Text>
                   </Button>
@@ -83,19 +83,19 @@
                   <Button onPress={() => this.press()}>
                      <Text>Page Enter Code</Text>
                  </Button>
-              </Row>
+              </Row> */}
 
-              <Row>
+              {/* <Row>
                   <Button onPress={() => this.press('AllPlayers')}>
                      <Text>All Players</Text>
                   </Button>
-              </Row>
+              </Row> */}
 
-              <Row>
+              {/* <Row>
                   <Button onPress={() => this.press('GamePlay')}>
                      <Text>Final Page</Text>
                  </Button>
-              </Row>
+              </Row> */}
 
               <Row>
                   <Button onPress={() => this.press('CardSlider')}>
