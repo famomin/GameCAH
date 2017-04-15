@@ -1,15 +1,21 @@
-dependencies: /Users/meganliken/GameCAH/ios/GameCAHTests/GameCAHTests.m \
+dependencies: \
+  /Users/FarasMomin/Documents/Coding\ Bootcamp/React\ Native\ Apps/GameCAH/ios/GameCAHTests/GameCAHTests.m \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Modules/module.modulemap \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIRemote.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIKeyboardKeys.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIElementQuery.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUICoordinate.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUISiriService.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIDevice.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIElementTypeQueryProvider.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIElementTypes.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIElementAttributes.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIElement.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIApplication.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTNSPredicateExpectation.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTNSNotificationExpectation.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTKVOExpectation.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTDarwinNotificationExpectation.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestSuiteRun.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestSuite.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestProbe.h \
@@ -20,6 +26,7 @@ dependencies: /Users/meganliken/GameCAH/ios/GameCAHTests/GameCAHTests.m \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestExpectation.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestRun.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestCaseRun.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTWaiter.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestCase+AsynchronousTesting.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestCase.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestAssertionsImpl.h \
@@ -28,13 +35,13 @@ dependencies: /Users/meganliken/GameCAH/ios/GameCAHTests/GameCAHTests.m \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestErrors.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestDefines.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTest.h \
-  /Users/meganliken/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTLog.h \
-  /Users/meganliken/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTAssert.h \
-  /Users/meganliken/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTDefines.h \
-  /Users/meganliken/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTRootView.h \
-  /Users/meganliken/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridge.h \
-  /Users/meganliken/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeDelegate.h \
-  /Users/meganliken/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTJavaScriptLoader.h \
-  /Users/meganliken/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeModule.h \
-  /Users/meganliken/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTFrameUpdate.h \
-  /Users/meganliken/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTInvalidating.h
+  /Users/FarasMomin/Documents/Coding\ Bootcamp/React\ Native\ Apps/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTLog.h \
+  /Users/FarasMomin/Documents/Coding\ Bootcamp/React\ Native\ Apps/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTAssert.h \
+  /Users/FarasMomin/Documents/Coding\ Bootcamp/React\ Native\ Apps/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTDefines.h \
+  /Users/FarasMomin/Documents/Coding\ Bootcamp/React\ Native\ Apps/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTRootView.h \
+  /Users/FarasMomin/Documents/Coding\ Bootcamp/React\ Native\ Apps/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridge.h \
+  /Users/FarasMomin/Documents/Coding\ Bootcamp/React\ Native\ Apps/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeDelegate.h \
+  /Users/FarasMomin/Documents/Coding\ Bootcamp/React\ Native\ Apps/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTJavaScriptLoader.h \
+  /Users/FarasMomin/Documents/Coding\ Bootcamp/React\ Native\ Apps/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeModule.h \
+  /Users/FarasMomin/Documents/Coding\ Bootcamp/React\ Native\ Apps/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTFrameUpdate.h \
+  /Users/FarasMomin/Documents/Coding\ Bootcamp/React\ Native\ Apps/GameCAH/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTInvalidating.h
