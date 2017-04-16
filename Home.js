@@ -214,7 +214,8 @@
              text: 'Enter',
              onPress: (text) => {
                //console.log("text: " + text)
-               this.itemsRef.push({title: text})
+               this.itemsRef.push({title: text},
+               this.press('CardSlider'))
              }
            },
          ],
