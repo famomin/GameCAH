@@ -4,22 +4,15 @@
  * @flow
  */
 
- import React, { Component } from 'react';
- import { AppRegistry, StyleSheet, Modal, Image, Platform, Navigator, TouchableHighlight, AlertIOS, ListView } from 'react-native';
- import { Spinner, Text, View, Content, Container, Header, Title, Button, Icon, InputGroup, ListItem, List, Radio, CheckBox, Thumbnail, Card, CardItem, H3, Form, Item, Input } from 'native-base';
- import { Col, Row, Grid } from 'react-native-easy-grid';
- import * as firebase from 'firebase';
+import React, { Component } from 'react';
+import { AppRegistry, StyleSheet, Modal, Image, Platform, Navigator, TouchableHighlight, AlertIOS, ListView } from 'react-native';
+import { Spinner, Text, View, Content, Container, Header, Title, Button, Icon, InputGroup, ListItem, List, Radio, CheckBox, Thumbnail, Card, CardItem, H3, Form, Item, Input } from 'native-base';
+import { Col, Row, Grid } from 'react-native-easy-grid';
+//import * as firebase from 'firebase';
 
+import firebase from './firebase';
 
- const config = {
-     apiKey: "AIzaSyCTKP5CD183HRaUy3NnS13iHAQNFJab8oo",
-     authDomain: "project3database.firebaseapp.com",
-     databaseURL: "https://project3database.firebaseio.com",
-     storageBucket: "project3database.appspot.com",
-   };
-  const firebaseApp = firebase.initializeApp(config);
-  
-  var rootRef = firebase.database().ref();
+var rootRef = firebase.ref();
 
  export default class Home extends Component {
    constructor(props) {
@@ -102,7 +95,7 @@
   // }
 
   getRef() {
-    return firebaseApp.database().ref();
+    return firebase.ref();
   }
    // The press function takes in an argument (movie name) and pushes to the navigator the individual movie page
    // It also passes along the name of the movie which will be used fetch information from the OMDB API
