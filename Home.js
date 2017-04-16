@@ -47,7 +47,7 @@
           "5": "wCard",
         },
         Room1: {
-          roomfull: true,
+          roomfull: false,
           state: true,
           player1: {
             name: "",
@@ -189,7 +189,7 @@
           var items = [];
           snap.forEach((child) => {
             items.push({
-              title: child.val().title,
+              //title: child.val().title,
               //_key: child.key,
             });
           });
@@ -212,9 +212,27 @@
            {text:'Cancel', onPress: () => console.log('Cancel Pressed'), style:'Cancel'},
            {
              text: 'Enter',
-             onPress: (text) => {
+             onPress: (playerName) => {
                //console.log("text: " + text)
-               this.itemsRef.push({title: text},
+               this.itemsRef.push({
+                 roomfull: false,
+                    state: true,
+                    player: {
+                      name: playerName,
+                      score: 0,
+                      judge: false,
+                      cards: {
+                        "1": "playerCard1",
+                        "2": "playerCard2",
+                        "3": "playerCard3",
+                        "4": "playerCard4",
+                        "5": "playerCard5",
+                        "6": "playerCard6",
+                        "7": "playerCard7",
+                      }
+                    },
+                 //title: playerName
+                },
                this.press('CardSlider'))
              }
            },
