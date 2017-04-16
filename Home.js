@@ -21,11 +21,6 @@
   
   var rootRef = firebase.database().ref();
 
-  // rootRef.once().then(
-  //   function(snapshot){
-  //     console.log(snapshot.val());
-  //   });
-
  export default class Home extends Component {
    constructor(props) {
     super(props);
@@ -36,7 +31,58 @@
     };
     this.itemsRef = this.getRef().child('items');
     //this.itemsRef = rootRef.child('items');
-  }
+    rootRef.set({
+        blackCards: {
+          "1": "bCard",
+          "2": "bCard",
+          "3": "bCard",
+          "4": "bCard",
+          "5": "bCard",
+        },
+        whiteCards: {
+          "1": "wCard",
+          "2": "wCard",
+          "3": "wCard",
+          "4": "wCard",
+          "5": "wCard",
+        },
+        Room1: {
+          roomfull: true,
+          state: true,
+          player1: {
+            name: "",
+            score: 0,
+            judge: false,
+            cards: {
+              "1": "playerCard1",
+              "2": "playerCard2",
+              "3": "playerCard3",
+              "4": "playerCard4",
+              "5": "playerCard5",
+              "6": "playerCard6",
+              "7": "playerCard7",
+            }
+          },
+          USEDwhiteCards: {
+            "1": "USEDwCard",
+            "2": "USEDwCard",
+            "3": "USEDwCard",
+            "4": "USEDwCard",
+            "5": "USEDwCard",
+          },
+          USEDblackCards: {
+            "1": "USEDbCard",
+            "2": "USEDbCard",
+            "3": "USEDbCard",
+            "4": "USEDbCard",
+            "5": "USEDbCard",
+          },
+          playedCards: {
+            "player1": "some card"
+          }
+        }
+      });
+    }
 
   // constructor(props) {
   //   super(props);
@@ -144,7 +190,7 @@
           snap.forEach((child) => {
             items.push({
               title: child.val().title,
-              _key: child.key
+              //_key: child.key,
             });
           });
 
