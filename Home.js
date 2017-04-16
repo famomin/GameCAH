@@ -57,10 +57,10 @@
               "1": "playerCard1",
               "2": "playerCard2",
               "3": "playerCard3",
-              "4": "playerCard4",
-              "5": "playerCard5",
-              "6": "playerCard6",
-              "7": "playerCard7",
+              // "4": "playerCard4",
+              // "5": "playerCard5",
+              // "6": "playerCard6",
+              // "7": "playerCard7",
             }
           },
           USEDwhiteCards: {
@@ -83,6 +83,9 @@
         }
       });
     }
+
+  
+
 
   // constructor(props) {
   //   super(props);
@@ -214,9 +217,9 @@
              text: 'Enter',
              onPress: (playerName) => {
                //console.log("text: " + text)
-               this.itemsRef.push({
-                 roomfull: false,
-                    state: true,
+               this.itemsRef.child("player1").set({
+                 //roomfull: false,
+                   // state: true,
                     player: {
                       name: playerName,
                       score: 0,
@@ -225,10 +228,10 @@
                         "1": "playerCard1",
                         "2": "playerCard2",
                         "3": "playerCard3",
-                        "4": "playerCard4",
-                        "5": "playerCard5",
-                        "6": "playerCard6",
-                        "7": "playerCard7",
+                        // "4": "playerCard4",
+                        // "5": "playerCard5",
+                        // "6": "playerCard6",
+                        // "7": "playerCard7",
                       }
                     },
                  //title: playerName
@@ -242,7 +245,9 @@
      }
    }
 
-
+rootRef.on("child_added", function(snapshot){
+    console.log(snapshot.val());
+  })
 
 const styles = StyleSheet.create({
   imageContainer: {
