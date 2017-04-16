@@ -21,10 +21,10 @@
   
   var rootRef = firebase.database().ref();
 
-  rootRef.once().then(
-    function(snapshot){
-      console.log(snapshot.val());
-    });
+  // rootRef.once().then(
+  //   function(snapshot){
+  //     console.log(snapshot.val());
+  //   });
 
  export default class Home extends Component {
    constructor(props) {
@@ -167,8 +167,8 @@
            {
              text: 'Enter',
              onPress: (text) => {
-               console.log("text: " + text)
-               itemsRef.push({title: text})
+               //console.log("text: " + text)
+               this.itemsRef.push({title: text})
              }
            },
          ],
