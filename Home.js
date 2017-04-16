@@ -29,7 +29,7 @@
         rowHasChanged: (row1, row2) => row1 !== row2,
       })
     };
-    this.itemsRef = this.getRef().child('items');
+    this.itemsRef = this.getRef().child('/Room1');
     //this.itemsRef = rootRef.child('items');
     rootRef.set({
         blackCards: {
@@ -49,20 +49,20 @@
         Room1: {
           roomfull: false,
           state: true,
-          player1: {
-            name: "",
-            score: 0,
-            judge: false,
-            cards: {
-              "1": "playerCard1",
-              "2": "playerCard2",
-              "3": "playerCard3",
-              // "4": "playerCard4",
-              // "5": "playerCard5",
-              // "6": "playerCard6",
-              // "7": "playerCard7",
-            }
-          },
+          // player1: {
+          //   name: "",
+          //   score: 0,
+          //   judge: false,
+          //   cards: {
+          //     "1": "playerCard1",
+          //     "2": "playerCard2",
+          //     "3": "playerCard3",
+          //     // "4": "playerCard4",
+          //     // "5": "playerCard5",
+          //     // "6": "playerCard6",
+          //     // "7": "playerCard7",
+          //   }
+          // },
           USEDwhiteCards: {
             "1": "USEDwCard",
             "2": "USEDwCard",
@@ -217,7 +217,7 @@
              text: 'Enter',
              onPress: (playerName) => {
                //console.log("text: " + text)
-               this.itemsRef.child("player1").push({
+               this.itemsRef.child("allPlayers").push({
                  //roomfull: false,
                    // state: true,
                     player: {

@@ -3,41 +3,41 @@ export const ENTRIES1 = [
         "title":"Flying sex snakes.",
       
     },
-     {
-        "title":"Michelle Obama's arms.",
+    //  {
+    //     "title":"Michelle Obama's arms.",
       
-    },
-     {
-        "title":"German dungeon porn.",
+    // },
+    //  {
+    //     "title":"German dungeon porn.",
       
-    },
-     {
-        "title":"White people.",
+    // },
+    //  {
+    //     "title":"White people.",
       
-    },
-     {
-        "title":"Getting so angry that you pop a boner.",
+    // },
+    //  {
+    //     "title":"Getting so angry that you pop a boner.",
       
-    },
-     {
-        "title":"Tasteful sideboob.",
+    // },
+    //  {
+    //     "title":"Tasteful sideboob.",
       
-    },
-     {
-        "title":"Praying the gay away.",
+    // },
+    //  {
+    //     "title":"Praying the gay away.",
       
-    },
-     {
-        "title":"Two midgets shitting into a bucket.",
+    // },
+    //  {
+    //     "title":"Two midgets shitting into a bucket.",
       
-    },
-     {
-        "title":"MechaHitler.",
+    // },
+    //  {
+    //     "title":"MechaHitler.",
       
-    },
-     {
-        "title":"Being a motherfucking sorcerer.",
-    },
+    // },
+    //  {
+    //     "title":"Being a motherfucking sorcerer.",
+    // },
       
     // },
     // 11: {
