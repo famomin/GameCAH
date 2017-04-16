@@ -217,7 +217,7 @@
              text: 'Enter',
              onPress: (playerName) => {
                //console.log("text: " + text)
-               this.itemsRef.child("player1").set({
+               this.itemsRef.child("player1").push({
                  //roomfull: false,
                    // state: true,
                     player: {
