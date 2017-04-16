@@ -18,8 +18,13 @@
      storageBucket: "project3database.appspot.com",
    };
   const firebaseApp = firebase.initializeApp(config);
-
+  
   var rootRef = firebase.database().ref();
+
+  rootRef.once().then(
+    function(snapshot){
+      console.log(snapshot.val());
+    });
 
  export default class Home extends Component {
    constructor(props) {
