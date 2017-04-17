@@ -11,33 +11,32 @@ export const ENTRIES1 = [
         "title":"German dungeon porn.",
       
     },
-    //  {
-    //     "title":"White people.",
+     {
+        "title":"White people.",      
+    },
+     {
+        "title":"Getting so angry that you pop a boner.",
       
-    // },
-    //  {
-    //     "title":"Getting so angry that you pop a boner.",
+    },
+     {
+        "title":"Tasteful sideboob.",
       
-    // },
-    //  {
-    //     "title":"Tasteful sideboob.",
+    },
+     {
+        "title":"Praying the gay away.",
       
-    // },
-    //  {
-    //     "title":"Praying the gay away.",
+    },
+     {
+        "title":"Two midgets shitting into a bucket.",
       
-    // },
-    //  {
-    //     "title":"Two midgets shitting into a bucket.",
+    },
+     {
+        "title":"MechaHitler.",
       
-    // },
-    //  {
-    //     "title":"MechaHitler.",
-      
-    // },
-    //  {
-    //     "title":"Being a motherfucking sorcerer.",
-    // },
+    },
+     {
+        "title":"Being a motherfucking sorcerer.",
+    },
       
     // },
     // 11: {
@@ -349,35 +348,5 @@ export const ENTRIES1 = [
       
 //];
 
-// export const ENTRIES2 = [
-//     {
-//         title: 'Favourites landscapes',
-//         subtitle: 'Lorem ipsum dolor sit amet',
-//         illustration: 'http://i.imgur.com/SsJmZ9jl.jpg'
-//     },
-//     {
-//         title: 'Favourites landscapes',
-//         subtitle: 'Lorem ipsum dolor sit amet et nuncat mergitur',
-//         illustration: 'http://i.imgur.com/5tj6S7Ol.jpg'
-//     },
-//     {
-//         title: 'Favourites landscapes',
-//         subtitle: 'Lorem ipsum dolor sit amet et nuncat',
-//         illustration: 'http://i.imgur.com/pmSqIFZl.jpg'
-//     },
-//     {
-//         title: 'Favourites landscapes',
-//         subtitle: 'Lorem ipsum dolor sit amet et nuncat mergitur',
-//         illustration: 'http://i.imgur.com/cA8zoGel.jpg'
-//     },
-//     {
-//         title: 'Favourites landscapes',
-//         subtitle: 'Lorem ipsum dolor sit amet',
-//         illustration: 'http://i.imgur.com/pewusMzl.jpg'
-//     },
-//     {
-//         title: 'Favourites landscapes',
-//         subtitle: 'Lorem ipsum dolor sit amet et nuncat',
-//         illustration: 'http://i.imgur.com/l49aYS3l.jpg'
-//     }
 ];
+
