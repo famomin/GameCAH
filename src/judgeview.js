@@ -9,6 +9,10 @@ import styles from 'GameCAH/src/styles/index.style';
 import styles1 from 'GameCAH/src/styles/SliderEntry.style';
 import { ENTRIES1, ENTRIES2 } from 'GameCAH/src/static/entries';
 
+import firebase from '../firebase';
+
+var rootRef = firebase.ref();
+
 export default class GameCAH extends Component {
 
     getSlides (entries) {
@@ -69,7 +73,7 @@ export default class GameCAH extends Component {
               </Carousel>
         );
     }*/
-
+    
     render () {
         const { title, subtitle, illustration, even } = this.props;
 
@@ -119,7 +123,7 @@ export default class GameCAH extends Component {
                         indicatorStyle={'white'}
                         scrollEventThrottle={200}
                     >
-
+                    {/*{ this.example1 }  */}
                     </ScrollView>
 
                 </Row>
@@ -127,3 +131,38 @@ export default class GameCAH extends Component {
         );
     }
 }
+
+
+
+rootRef.on("value", function(snapshot){
+    //console.log(snapshot.val().whiteCards);
+    wc = snapshot.val().whiteCards;
+    
+});
+
+
+
+        // componentDidMount() {
+        
+        //     rootRef.on("value", function(snapshot){
+        //         console.log(snapshot.val().Room1.playedCards);
+        //     });
+            
+        //     itemsRef.on('value', (snap) => {
+
+        //         // get children as an array
+        //         var items = [];
+        //         snap.forEach((child) => {
+        //         items.push({
+        //             //title: child.val().title,
+        //             //_key: child.key,
+        //         });
+        //         });
+
+        //         this.setState({
+        //         //dataSource: this.state.dataSource.cloneWithRows([{ title: 'Pizza' }])
+        //         dataSource: this.state.dataSource.cloneWithRows(items)
+        //         });
+
+        //     });
+        // }

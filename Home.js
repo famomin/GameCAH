@@ -15,6 +15,7 @@ import firebase from './firebase';
 var rootRef = firebase.ref();
 
  export default class Home extends Component {
+   
    constructor(props) {
     super(props);
     this.state = {
@@ -26,18 +27,18 @@ var rootRef = firebase.ref();
     //this.itemsRef = rootRef.child('items');
     rootRef.set({
         blackCards: {
-          "1": "bCard",
-          "2": "bCard",
-          "3": "bCard",
-          "4": "bCard",
-          "5": "bCard",
+          "1": "bCard1",
+          "2": "bCard2",
+          "3": "bCard3",
+          "4": "bCard4",
+          "5": "bCard5",
         },
         whiteCards: {
-          "1": "wCard",
-          "2": "wCard",
-          "3": "wCard",
-          "4": "wCard",
-          "5": "wCard",
+          "1": "wCard1",
+          "2": "wCard2",
+          "3": "wCard3",
+          "4": "wCard4",
+          "5": "wCard5",
         },
         Room1: {
           roomfull: false,
@@ -238,8 +239,8 @@ var rootRef = firebase.ref();
      }
    }
 
-rootRef.on("child_added", function(snapshot){
-    console.log(snapshot.val());
+rootRef.on("value", function(snapshot){
+    console.log(snapshot.val().blackCards)
   })
 
 const styles = StyleSheet.create({

@@ -3,14 +3,14 @@ export const ENTRIES1 = [
         "title":"Flying sex snakes.",
       
     },
-    //  {
-    //     "title":"Michelle Obama's arms.",
+     {
+        "title":"Michelle Obama's arms.",
       
-    // },
-    //  {
-    //     "title":"German dungeon porn.",
+    },
+     {
+        "title":"German dungeon porn.",
       
-    // },
+    },
     //  {
     //     "title":"White people.",
       
