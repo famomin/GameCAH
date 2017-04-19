@@ -13,18 +13,23 @@ import firebase from '../firebase';
 
 var rootRef = firebase.ref();
 
-var wc = [];
-
 export default class GameCAH extends Component {
-
-    firebaseWC () {
-
-        rootRef.once("value").then(function(snapshot){
-            wc = snapshot.val().whiteCards;
-            console.log("wc in firebaseWVC" + wc);
-        });
-        return;
+    constructor(props) {
+        super(props);
+        this.state = { 
+            wc: null,
+        }
+        this.wc = null;
     }
+
+    // firebaseWC () {
+
+    //     rootRef.once("value").then(function(snapshot){
+    //         this.wc = snapshot.val().whiteCards;
+    //         console.log("wc in firebaseWVC" + wc);
+    //     });
+    //     return;
+    // }
 
     getSlides (entries) {
         if (!entries) {
@@ -44,8 +49,8 @@ export default class GameCAH extends Component {
     }
 
     get example1 () {
-        this.firebaseWC()
-        console.log("wc in exaple1: " + wc);
+        let wc = this.state.wc;
+        console.log(wc);
         return (
             <Carousel
               sliderWidth={sliderWidth}
@@ -60,9 +65,19 @@ export default class GameCAH extends Component {
               snapOnAndroid={true}
               removeClippedSubviews={false}
             >
-                { this.getSlides(wc) }
+                { this.getSlides(ENTRIES1) }
             </Carousel>
         );
+    }
+
+    componentWillMount() {
+        rootRef.once("value").then((snapshot) => {
+            wc = snapshot.val().whiteCards;
+            console.log("wc in firebaseWVC" + wc);
+            this.setState({
+                wc: wc,
+            });
+        });
     }
 
     /*get example2 () {
@@ -145,8 +160,6 @@ export default class GameCAH extends Component {
     }
 }
 
-
-console.log(wc);
 
         // componentDidMount() {
         

@@ -27,18 +27,18 @@ var rootRef = firebase.ref();
     //this.itemsRef = rootRef.child('items');
     rootRef.set({
         blackCards: {
-          "1": "bCard1",
-          "2": "bCard2",
-          "3": "bCard3",
-          "4": "bCard4",
-          "5": "bCard5",
+          "0": "bCard1",
+          "1": "bCard2",
+          "2": "bCard3",
+          "3": "bCard4",
+          "4": "bCard5"
         },
         whiteCards: {
-          "1": "wCard1",
-          "2": "wCard2",
-          "3": "wCard3",
-          "4": "wCard4",
-          "5": "wCard5",
+          "0": "wCard1",
+          "1": "wCard2",
+          "2": "wCard3",
+          "3": "wCard4",
+          "4": "wCard5"
         },
         Room1: {
           roomfull: false,
@@ -58,18 +58,18 @@ var rootRef = firebase.ref();
           //   }
           // },
           USEDwhiteCards: {
+            "0": "USEDwCard",
             "1": "USEDwCard",
             "2": "USEDwCard",
             "3": "USEDwCard",
-            "4": "USEDwCard",
-            "5": "USEDwCard",
+            "4": "USEDwCard"
           },
           USEDblackCards: {
+            "0": "USEDbCard",
             "1": "USEDbCard",
             "2": "USEDbCard",
             "3": "USEDbCard",
-            "4": "USEDbCard",
-            "5": "USEDbCard",
+            "4": "USEDbCard"
           },
           playedCards: {
             "player1": "some card"
@@ -240,7 +240,7 @@ var rootRef = firebase.ref();
    }
 
 rootRef.on("value", function(snapshot){
-    console.log(snapshot.val().blackCards)
+    console.log(snapshot.val().whiteCards)
   })
 
 const styles = StyleSheet.create({
