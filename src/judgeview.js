@@ -19,17 +19,7 @@ export default class GameCAH extends Component {
         this.state = { 
             wc: null,
         }
-        this.wc = null;
     }
-
-    // firebaseWC () {
-
-    //     rootRef.once("value").then(function(snapshot){
-    //         this.wc = snapshot.val().whiteCards;
-    //         console.log("wc in firebaseWVC" + wc);
-    //     });
-    //     return;
-    // }
 
     getSlides (entries) {
         if (!entries) {
@@ -159,29 +149,3 @@ export default class GameCAH extends Component {
         );
     }
 }
-
-
-        // componentDidMount() {
-        
-        //     rootRef.on("value", function(snapshot){
-        //         console.log(snapshot.val().Room1.playedCards);
-        //     });
-            
-        //     itemsRef.on('value', (snap) => {
-
-        //         // get children as an array
-        //         var items = [];
-        //         snap.forEach((child) => {
-        //         items.push({
-        //             //title: child.val().title,
-        //             //_key: child.key,
-        //         });
-        //         });
-
-        //         this.setState({
-        //         //dataSource: this.state.dataSource.cloneWithRows([{ title: 'Pizza' }])
-        //         dataSource: this.state.dataSource.cloneWithRows(items)
-        //         });
-
-        //     });
-        // }
