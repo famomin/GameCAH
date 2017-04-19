@@ -17,7 +17,7 @@ export default class GameCAH extends Component {
     constructor(props) {
         super(props);
         this.state = { 
-            wc: null,
+            pwc: null,
         }
     }
 
@@ -39,8 +39,8 @@ export default class GameCAH extends Component {
     }
 
     get example1 () {
-        let wc = this.state.wc;
-        console.log(wc);
+        let pwc = this.state.pwc;
+        console.log(pwc);
         return (
             <Carousel
               ref={(carousel) => { this._carousel = carousel; }}
@@ -56,17 +56,17 @@ export default class GameCAH extends Component {
               snapOnAndroid={true}
               removeClippedSubviews={false}
             >
-                { this.getSlides(wc) }
+                { this.getSlides(pwc) }
             </Carousel>
         );
     }
 
     componentWillMount() {
         rootRef.once("value").then((snapshot) => {
-            wc = snapshot.val().whiteCards;
-            console.log("wc in firebaseWVC" + wc);
+            pwc = snapshot.val().Room1.playedCards;
+            console.log("pwc in firebaseWVC" + pwc);
             this.setState({
-                wc: wc,
+                pwc: pwc,
             });
         });
     }
