@@ -26,20 +26,48 @@ var rootRef = firebase.ref();
     this.itemsRef = this.getRef().child('/Room1');
     //this.itemsRef = rootRef.child('items');
     rootRef.set({
-        blackCards: {
-          "0": "bCard1",
-          "1": "bCard2",
-          "2": "bCard3",
-          "3": "bCard4",
-          "4": "bCard5"
-        },
-        whiteCards: {
-          "0": "wCard1",
-          "1": "wCard2",
-          "2": "wCard3",
-          "3": "wCard4",
-          "4": "wCard5"
-        },
+        blackCards: [
+          {
+              "title":"bCard1",
+            
+          },
+          {
+              "title":"bCard2",
+            
+          },
+          {
+              "title":"bCard3",
+            
+          },
+          {
+              "title":"bCard4",
+            
+          },
+          {
+              "title":"bCard5",
+            
+          }],
+        whiteCards: [
+          {
+              "title":"wCard1",
+            
+          },
+          {
+              "title":"wCard2",
+            
+          },
+          {
+              "title":"wCard3",
+            
+          },
+          {
+              "title":"wCard4",
+            
+          },
+          {
+              "title":"wCard5",
+            
+          }],
         Room1: {
           roomfull: false,
           state: true,
@@ -57,20 +85,48 @@ var rootRef = firebase.ref();
           //     // "7": "playerCard7",
           //   }
           // },
-          USEDwhiteCards: {
-            "0": "USEDwCard",
-            "1": "USEDwCard",
-            "2": "USEDwCard",
-            "3": "USEDwCard",
-            "4": "USEDwCard"
+          USEDwhiteCards: [
+          {
+              "title":"USEDwCard",
+            
           },
-          USEDblackCards: {
-            "0": "USEDbCard",
-            "1": "USEDbCard",
-            "2": "USEDbCard",
-            "3": "USEDbCard",
-            "4": "USEDbCard"
+          {
+              "title":"USEDwCard",
+            
           },
+          {
+              "title":"USEDwCard",
+            
+          },
+          {
+              "title":"USEDwCard",
+            
+          },
+          {
+              "title":"USEDwCard",
+            
+          }],
+          USEDblackCards: [
+          {
+              "title":"USEDbCard",
+            
+          },
+          {
+              "title":"USEDbCard",
+            
+          },
+          {
+              "title":"USEDbCard",
+            
+          },
+          {
+              "title":"USEDbCard",
+            
+          },
+          {
+              "title":"USEDbCard",
+            
+          }],
           playedCards: {
             "player1": "some card"
           }
@@ -239,9 +295,9 @@ var rootRef = firebase.ref();
      }
    }
 
-rootRef.on("value", function(snapshot){
-    console.log(snapshot.val().whiteCards)
-  })
+// rootRef.on("value", function(snapshot){
+//     console.log(snapshot.val().blackCards)
+//   })
 
 const styles = StyleSheet.create({
   imageContainer: {

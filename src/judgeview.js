@@ -65,7 +65,7 @@ export default class GameCAH extends Component {
               snapOnAndroid={true}
               removeClippedSubviews={false}
             >
-                { this.getSlides(ENTRIES1) }
+                { this.getSlides(wc) }
             </Carousel>
         );
     }
