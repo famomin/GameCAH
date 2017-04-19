@@ -4,7 +4,7 @@
  * @flow
  */
 
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { AppRegistry, StyleSheet, Modal, Image, Platform, Navigator, TouchableHighlight, AlertIOS, ListView } from 'react-native';
 import { Spinner, Text, View, Content, Container, Header, Title, Button, Icon, InputGroup, ListItem, List, Radio, CheckBox, Thumbnail, Card, CardItem, H3, Form, Item, Input } from 'native-base';
 import { Col, Row, Grid } from 'react-native-easy-grid';
@@ -137,6 +137,14 @@ var rootRef = firebase.ref();
       });
     }
 
+    getChildContext() {
+      return {
+        name: 'azimMomin',
+      }
+    }
+
+    
+
   
 
 
@@ -154,23 +162,47 @@ var rootRef = firebase.ref();
   //   });
   // }
 
+  addplayer(pname) {
+    //console.log("text: " + text)
+    this.itemsRef.child("allPlayers").push({
+      //roomfull: false,
+        // state: true,
+        player: {
+          name: pname,
+          score: 0,
+          judge: false,
+          cards: {
+            "1": "playerCard1",
+            "2": "playerCard2",
+            "3": "playerCard3",
+            // "4": "playerCard4",
+            // "5": "playerCard5",
+            // "6": "playerCard6",
+            // "7": "playerCard7",
+          }
+        },
+      //title: playerName
+    },
+    this.press('CardSlider'))
+  }
+
   getRef() {
     return firebase.ref();
   }
    // The press function takes in an argument (movie name) and pushes to the navigator the individual movie page
    // It also passes along the name of the movie which will be used fetch information from the OMDB API
    press(Page) {
-     if(Page === 'GamePlay'){
-        this.props.navigator.push({
-          id: 4,
-        });
-     }
-     else if(Page === 'AllPlayers'){
-        this.props.navigator.push({
-          id: 3,
-        });
-     }
-     else if(Page === 'CardSlider'){
+    //  if(Page === 'GamePlay'){
+    //     this.props.navigator.push({
+    //       id: 4,
+    //     });
+    //  }
+    //  else if(Page === 'AllPlayers'){
+    //     this.props.navigator.push({
+    //       id: 3,
+    //     });
+    //  }
+     if(Page === 'CardSlider'){
         this.props.navigator.push({
           id: 6,
         });
@@ -202,11 +234,11 @@ var rootRef = firebase.ref();
               <Row></Row>
               <Row></Row>
 
-                <Form style={{backgroundColor:'#eeeeee'}}>
+                {/*<Form style={{backgroundColor:'#eeeeee'}}>
                     <Item>
-                        <Input placeholder="Enter your name" />
+                        <Input placeholder="Enter your name"  />
                     </Item>
-                </Form>
+                </Form>*/}
 
               <Row>
                   <Button block success onPress={() => this.press('NewGame')}>
@@ -269,27 +301,8 @@ var rootRef = firebase.ref();
            {
              text: 'Enter',
              onPress: (playerName) => {
-               //console.log("text: " + text)
-               this.itemsRef.child("allPlayers").push({
-                 //roomfull: false,
-                   // state: true,
-                    player: {
-                      name: playerName,
-                      score: 0,
-                      judge: false,
-                      cards: {
-                        "1": "playerCard1",
-                        "2": "playerCard2",
-                        "3": "playerCard3",
-                        // "4": "playerCard4",
-                        // "5": "playerCard5",
-                        // "6": "playerCard6",
-                        // "7": "playerCard7",
-                      }
-                    },
-                 //title: playerName
-                },
-               this.press('CardSlider'))
+                this.addplayer(playerName);
+                this.firstButtonPress.bind(this);
              }
            },
          ],
@@ -297,6 +310,7 @@ var rootRef = firebase.ref();
        );
      }
    }
+   
 
 // rootRef.on("value", function(snapshot){
 //     console.log(snapshot.val().blackCards)
@@ -333,3 +347,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
 });
+
+Home.childContextTypes = {
+  name: PropTypes.string,
+}

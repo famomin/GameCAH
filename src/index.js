@@ -15,8 +15,8 @@ var rootRef = firebase.ref();
 
 export default class GameCAH extends Component {
 
-    constructor(props) {
-        super(props);
+    constructor(props, context) {
+        super(props, context);
         this.state = { 
             wc: null,
         }
@@ -24,11 +24,13 @@ export default class GameCAH extends Component {
     }
 
   press(Page) {
-    if(Page === 'JudgeView'){
-       this.props.navigator.push({
-         id: 7,
-       });
-    }
+    // if(Page === 'JudgeView'){
+    //    this.props.navigator.push({
+    //      id: 7,
+    //    });
+    // }
+    console.log(this._carousel.currentIndex);
+    console.log(this.context.name);
   }
 
     getSlides (entries) {
@@ -72,6 +74,7 @@ export default class GameCAH extends Component {
 
     componentWillMount() {
         rootRef.once("value").then((snapshot) => {
+            //wc = snapshot.val().Room1.allPlayers.child("azim");
             wc = snapshot.val().blackCards;
             console.log("wc in firebaseWVC" + wc);
             this.setState({
@@ -160,7 +163,6 @@ export default class GameCAH extends Component {
                     </ScrollView>
 
                 </Row>
-                <Row><Text>{this._carousel.currentIndex}</Text></Row>
                 <Row size={10} style={styles1.centerC}>
                 <Button full success onPress={() => this.press('JudgeView')}>
                     <Text>Submit</Text>
@@ -169,4 +171,8 @@ export default class GameCAH extends Component {
             </Grid>
         );
     }
+}
+
+GameCAH.contextTypes = {
+    name: PropTypes.string,
 }

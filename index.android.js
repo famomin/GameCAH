@@ -4,7 +4,7 @@
  * @flow
  */
 
-import App from './app.js';
+import App from './Home.js';
 export default App;
 
 // import React, { Component } from 'react';
