@@ -17,14 +17,9 @@
 		7T5ktvvXyDSJtKLhs9ZTloNZpJc=
 		</data>
 		<key>Base.lproj/LaunchScreen.nib</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			AivntRwEo6W6AmKxLoevdnE1Lp4=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
+		<data>
+		yBT0gUMoUpFulYwLKDWsHA/BuLA=
+		</data>
 		<key>Comic Sans MS.ttf</key>
 		<data>
 		7E3iKa8HKXylvcnkb6TbSjlU7IY=
@@ -272,7 +267,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		w+ejw/D6YAXUzfEOEIrfK9dabVc=
+		sAJN/AS06eiJiJf8pfPF4TRLN/M=
 		</data>
 		<key>Ionicons.ttf</key>
 		<data>
@@ -308,7 +303,7 @@
 		</data>
 		<key>PlugIns/GameCAHTests.xctest/GameCAHTests</key>
 		<data>
-		bXnoz1FulMEs26RhGas7EhJC9Nc=
+		BBPzpk9Uy23sJByzakObp5bhSA0=
 		</data>
 		<key>PlugIns/GameCAHTests.xctest/Info.plist</key>
 		<data>
@@ -438,14 +433,12 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			AivntRwEo6W6AmKxLoevdnE1Lp4=
+			yBT0gUMoUpFulYwLKDWsHA/BuLA=
 			</data>
 			<key>hash2</key>
 			<data>
-			WAxnJF+LOPWNlKeei6uGY+2WPTTW6QPvo0+vK+/25lA=
+			5FigApLmgN/DPmU29zgW5qu1Oi+5HH6lUUJt3MgatM0=
 			</data>
-			<key>optional</key>
-			<true/>
 		</dict>
 		<key>Comic Sans MS.ttf</key>
 		<dict>
@@ -1195,11 +1188,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			bXnoz1FulMEs26RhGas7EhJC9Nc=
+			BBPzpk9Uy23sJByzakObp5bhSA0=
 			</data>
 			<key>hash2</key>
 			<data>
-			fjMqE7J5DIdBMOf8t3RmTSmEcSFVJQltLIwCPDILJfA=
+			zj2u68scnBXC/RHqhpBgBDmMaM+ALX9j8WMDjFxrm98=
 			</data>
 		</dict>
 		<key>PlugIns/GameCAHTests.xctest/Info.plist</key>
@@ -1463,6 +1456,11 @@
 			<key>weight</key>
 			<real>1100</real>
 		</dict>
+		<key>^Base\.lproj/</key>
+		<dict>
+			<key>weight</key>
+			<real>1010</real>
+		</dict>
 		<key>^version.plist$</key>
 		<true/>
 	</dict>
@@ -1507,6 +1505,11 @@
 			<true/>
 			<key>weight</key>
 			<real>1100</real>
+		</dict>
+		<key>^Base\.lproj/</key>
+		<dict>
+			<key>weight</key>
+			<real>1010</real>
 		</dict>
 		<key>^Info\.plist$</key>
 		<dict>

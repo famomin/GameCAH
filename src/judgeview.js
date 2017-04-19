@@ -13,17 +13,12 @@ import firebase from '../firebase';
 
 var rootRef = firebase.ref();
 
-var wc = [];
-
 export default class GameCAH extends Component {
-
-    firebaseWC () {
-
-        rootRef.once("value").then(function(snapshot){
-            wc = snapshot.val().whiteCards;
-            console.log("wc in firebaseWVC" + wc);
-        });
-        return;
+    constructor(props) {
+        super(props);
+        this.state = { 
+            pwc: null,
+        }
     }
 
     getSlides (entries) {
@@ -44,10 +39,11 @@ export default class GameCAH extends Component {
     }
 
     get example1 () {
-        this.firebaseWC()
-        console.log("wc in exaple1: " + wc);
+        let pwc = this.state.pwc;
+        console.log(pwc);
         return (
             <Carousel
+              ref={(carousel) => { this._carousel = carousel; }}
               sliderWidth={sliderWidth}
               itemWidth={itemWidth}
               firstItem={1}
@@ -60,9 +56,19 @@ export default class GameCAH extends Component {
               snapOnAndroid={true}
               removeClippedSubviews={false}
             >
-                { this.getSlides(wc) }
+                { this.getSlides(pwc) }
             </Carousel>
         );
+    }
+
+    componentWillMount() {
+        rootRef.once("value").then((snapshot) => {
+            pwc = snapshot.val().Room1.playedCards;
+            console.log("pwc in firebaseWVC" + pwc);
+            this.setState({
+                pwc: pwc,
+            });
+        });
     }
 
     /*get example2 () {
@@ -144,31 +150,3 @@ export default class GameCAH extends Component {
         );
     }
 }
-
-
-console.log(wc);
-
-        // componentDidMount() {
-        
-        //     rootRef.on("value", function(snapshot){
-        //         console.log(snapshot.val().Room1.playedCards);
-        //     });
-            
-        //     itemsRef.on('value', (snap) => {
-
-        //         // get children as an array
-        //         var items = [];
-        //         snap.forEach((child) => {
-        //         items.push({
-        //             //title: child.val().title,
-        //             //_key: child.key,
-        //         });
-        //         });
-
-        //         this.setState({
-        //         //dataSource: this.state.dataSource.cloneWithRows([{ title: 'Pizza' }])
-        //         dataSource: this.state.dataSource.cloneWithRows(items)
-        //         });
-
-        //     });
-        // }

@@ -25,7 +25,7 @@ export default class SliderEntry extends Component {
                 <TouchableOpacity
                   activeOpacity={0.7}
                   style={styles.slideInnerContainer}
-                  // onPress={() => { alert(`You've clicked '${title}'`); }}
+                  onPress={() => { alert(`You've clicked '${title}'`); }}
                   >
                     {/*<View style={[styles.imageContainer, even ? styles.imageContainerEven : {}]}>
                         <Image

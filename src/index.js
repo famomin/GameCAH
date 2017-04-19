@@ -9,7 +9,19 @@ import styles from 'GameCAH/src/styles/index.style';
 import styles1 from 'GameCAH/src/styles/SliderEntry.style';
 import { ENTRIES1, ENTRIES2 } from 'GameCAH/src/static/entries';
 
+import firebase from '../firebase';
+
+var rootRef = firebase.ref();
+
 export default class GameCAH extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = { 
+            wc: null,
+        }
+        this._carousel = 0;
+    }
 
   press(Page) {
     if(Page === 'JudgeView'){
@@ -37,8 +49,10 @@ export default class GameCAH extends Component {
     }
 
     get example1 () {
+        let wc = this.state.wc;
         return (
             <Carousel
+              ref={(carousel) => { this._carousel = carousel; }}
               sliderWidth={sliderWidth}
               itemWidth={itemWidth}
               firstItem={1}
@@ -51,9 +65,19 @@ export default class GameCAH extends Component {
               snapOnAndroid={true}
               removeClippedSubviews={false}
             >
-                { this.getSlides(ENTRIES1) }
+                { this.getSlides(wc) }
             </Carousel>
         );
+    }
+
+    componentWillMount() {
+        rootRef.once("value").then((snapshot) => {
+            wc = snapshot.val().blackCards;
+            console.log("wc in firebaseWVC" + wc);
+            this.setState({
+                wc: wc,
+            });
+        });
     }
 
     /*get example2 () {
@@ -136,6 +160,7 @@ export default class GameCAH extends Component {
                     </ScrollView>
 
                 </Row>
+                <Row><Text>{this._carousel.currentIndex}</Text></Row>
                 <Row size={10} style={styles1.centerC}>
                 <Button full success onPress={() => this.press('JudgeView')}>
                     <Text>Submit</Text>

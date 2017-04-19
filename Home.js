@@ -25,21 +25,49 @@ var rootRef = firebase.ref();
     };
     this.itemsRef = this.getRef().child('/Room1');
     //this.itemsRef = rootRef.child('items');
-    rootRef.set({
-        blackCards: {
-          "1": "bCard1",
-          "2": "bCard2",
-          "3": "bCard3",
-          "4": "bCard4",
-          "5": "bCard5",
-        },
-        whiteCards: {
-          "1": "wCard1",
-          "2": "wCard2",
-          "3": "wCard3",
-          "4": "wCard4",
-          "5": "wCard5",
-        },
+    rootRef.update({
+        // blackCards: [
+        //   {
+        //       "title":"bCard1",
+            
+        //   },
+        //   {
+        //       "title":"bCard2",
+            
+        //   },
+        //   {
+        //       "title":"bCard3",
+            
+        //   },
+        //   {
+        //       "title":"bCard4",
+            
+        //   },
+        //   {
+        //       "title":"bCard5",
+            
+        //   }],
+        // whiteCards: [
+        //   {
+        //       "title":"wCard1",
+            
+        //   },
+        //   {
+        //       "title":"wCard2",
+            
+        //   },
+        //   {
+        //       "title":"wCard3",
+            
+        //   },
+        //   {
+        //       "title":"wCard4",
+            
+        //   },
+        //   {
+        //       "title":"wCard5",
+            
+        //   }],
         Room1: {
           roomfull: false,
           state: true,
@@ -57,23 +85,54 @@ var rootRef = firebase.ref();
           //     // "7": "playerCard7",
           //   }
           // },
-          USEDwhiteCards: {
-            "1": "USEDwCard",
-            "2": "USEDwCard",
-            "3": "USEDwCard",
-            "4": "USEDwCard",
-            "5": "USEDwCard",
+          USEDwhiteCards: [
+          {
+              "title":"USEDwCard",
+            
           },
-          USEDblackCards: {
-            "1": "USEDbCard",
-            "2": "USEDbCard",
-            "3": "USEDbCard",
-            "4": "USEDbCard",
-            "5": "USEDbCard",
+          {
+              "title":"USEDwCard",
+            
           },
-          playedCards: {
-            "player1": "some card"
-          }
+          {
+              "title":"USEDwCard",
+            
+          },
+          {
+              "title":"USEDwCard",
+            
+          },
+          {
+              "title":"USEDwCard",
+            
+          }],
+          USEDblackCards: [
+          {
+              "title":"USEDbCard",
+            
+          },
+          {
+              "title":"USEDbCard",
+            
+          },
+          {
+              "title":"USEDbCard",
+            
+          },
+          {
+              "title":"USEDbCard",
+            
+          },
+          {
+              "title":"USEDbCard",
+            
+          }],
+          playedCards:[
+            {
+              "title": "some card"
+            }
+          ]
+           
         }
       });
     }
@@ -239,9 +298,9 @@ var rootRef = firebase.ref();
      }
    }
 
-rootRef.on("value", function(snapshot){
-    console.log(snapshot.val().blackCards)
-  })
+// rootRef.on("value", function(snapshot){
+//     console.log(snapshot.val().blackCards)
+//   })
 
 const styles = StyleSheet.create({
   imageContainer: {
