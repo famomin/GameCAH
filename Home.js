@@ -26,48 +26,6 @@ var rootRef = firebase.ref();
     this.itemsRef = this.getRef().child('/Room1');
     //this.itemsRef = rootRef.child('items');
     rootRef.update({
-        // blackCards: [
-        //   {
-        //       "title":"bCard1",
-            
-        //   },
-        //   {
-        //       "title":"bCard2",
-            
-        //   },
-        //   {
-        //       "title":"bCard3",
-            
-        //   },
-        //   {
-        //       "title":"bCard4",
-            
-        //   },
-        //   {
-        //       "title":"bCard5",
-            
-        //   }],
-        // whiteCards: [
-        //   {
-        //       "title":"wCard1",
-            
-        //   },
-        //   {
-        //       "title":"wCard2",
-            
-        //   },
-        //   {
-        //       "title":"wCard3",
-            
-        //   },
-        //   {
-        //       "title":"wCard4",
-            
-        //   },
-        //   {
-        //       "title":"wCard5",
-            
-        //   }],
         Room1: {
           roomfull: false,
           state: true,
@@ -132,7 +90,7 @@ var rootRef = firebase.ref();
               "title": "some card"
             }
           ]
-           
+          
         }
       });
     }
