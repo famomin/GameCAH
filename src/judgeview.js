@@ -43,6 +43,7 @@ export default class GameCAH extends Component {
         console.log(wc);
         return (
             <Carousel
+              ref={(carousel) => { this._carousel = carousel; }}
               sliderWidth={sliderWidth}
               itemWidth={itemWidth}
               firstItem={1}

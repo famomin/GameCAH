@@ -20,6 +20,7 @@ export default class GameCAH extends Component {
         this.state = { 
             wc: null,
         }
+        this._carousel = 0;
     }
 
   press(Page) {
@@ -51,6 +52,7 @@ export default class GameCAH extends Component {
         let wc = this.state.wc;
         return (
             <Carousel
+              ref={(carousel) => { this._carousel = carousel; }}
               sliderWidth={sliderWidth}
               itemWidth={itemWidth}
               firstItem={1}
@@ -158,6 +160,7 @@ export default class GameCAH extends Component {
                     </ScrollView>
 
                 </Row>
+                <Row><Text>{this._carousel.currentIndex}</Text></Row>
                 <Row size={10} style={styles1.centerC}>
                 <Button full success onPress={() => this.press('JudgeView')}>
                     <Text>Submit</Text>
