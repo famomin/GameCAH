@@ -70,6 +70,10 @@ export default class GameCAH extends Component {
                 pwc: pwc,
             });
         });
+        const playerName = this.props.playerName;
+        this.setState({
+            playerName: playerName,
+        })
     }
 
     /*get example2 () {
@@ -95,6 +99,7 @@ export default class GameCAH extends Component {
     }*/
     
     render () {
+        let playedName = this.state.playerName;
         const { title, subtitle, illustration, even } = this.props;
 
         const uppercaseTitle = title ? (
@@ -111,6 +116,7 @@ export default class GameCAH extends Component {
                 <Row size={10}>
                     <Col>
                         <Text style={styles1.topGameBar}>Name</Text>
+                        <Text>{playedName}</Text>
                     </Col>
 
                     <Col>

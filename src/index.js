@@ -25,11 +25,11 @@ export default class GameCAH extends Component {
     }
 
   press(Page) {
-    // if(Page === 'JudgeView'){
-    //    this.props.navigator.push({
-    //      id: 7,
-    //    });
-    // }
+    if(Page === 'JudgeView'){
+       this.props.navigator.push({
+         id: 7,
+       });
+    }
     var carouselIndex = this._carousel.currentIndex
     console.log(carouselIndex);
     this.updateCard();
