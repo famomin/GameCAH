@@ -21,8 +21,10 @@ var rootRef = firebase.ref();
     this.state = {
       dataSource: new ListView.DataSource({
         rowHasChanged: (row1, row2) => row1 !== row2,
-      })
+      }),
+      playerName: null,
     };
+
     this.itemsRef = this.getRef().child('/Room1');
     //this.itemsRef = rootRef.child('items');
     rootRef.update({
@@ -101,28 +103,9 @@ var rootRef = firebase.ref();
       }
     }
 
-    
-
-  
-
-
-  // constructor(props) {
-  //   super(props);
-    
-  //   rootRef.set({
-  //     title: "Hello World!",
-  //     author: "Simon",
-  //     location: {
-  //       city: "Muenster",
-  //       state: "Germany",
-  //       zip: 48155
-  //     }
-  //   });
-  // }
-
   addplayer(pname) {
     //console.log("text: " + text)
-    this.itemsRef.child("allPlayers").push({
+    this.itemsRef.child("allPlayers").child(pname).set({
       //roomfull: false,
         // state: true,
         player: {
@@ -179,6 +162,7 @@ var rootRef = firebase.ref();
    }
 
    render() {
+     let playerName = this.state.playerName;
        return (
          <Image
            source={require('./images/cah.png')}
@@ -260,7 +244,10 @@ var rootRef = firebase.ref();
              text: 'Enter',
              onPress: (playerName) => {
                 this.addplayer(playerName);
-                this.firstButtonPress.bind(this);
+                this.setState({
+                  playerName: playerName,
+                })
+                //this.firstButtonPress.bind(this);
              }
            },
          ],

@@ -29,8 +29,16 @@ export default class GameCAH extends Component {
     //      id: 7,
     //    });
     // }
-    console.log(this._carousel.currentIndex);
-    console.log(this.context.name);
+    var carouselIndex = this._carousel.currentIndex
+    console.log(carouselIndex);
+    this.updateCard();
+    //console.log(this.context.name);
+  }
+
+  updateCard() {
+    rootRef.on("value", function(snapshot){
+        console.log(snapshot.val().Room1.allPlayers);
+    });
   }
 
     getSlides (entries) {
@@ -75,8 +83,8 @@ export default class GameCAH extends Component {
     componentWillMount() {
         rootRef.once("value").then((snapshot) => {
             //wc = snapshot.val().Room1.allPlayers.child("azim");
-            wc = snapshot.val().blackCards;
-            console.log("wc in firebaseWVC" + wc);
+            wc = snapshot.val().whiteCards;
+            //console.log("wc in firebaseWVC" + wc);
             this.setState({
                 wc: wc,
             });

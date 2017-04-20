@@ -8,6 +8,7 @@ import SliderEntry from 'GameCAH/src/components/SliderEntry';
 import styles from 'GameCAH/src/styles/index.style';
 import styles1 from 'GameCAH/src/styles/SliderEntry.style';
 import { ENTRIES1, ENTRIES2 } from 'GameCAH/src/static/entries';
+import Home from '../Home';
 
 import firebase from '../firebase';
 
