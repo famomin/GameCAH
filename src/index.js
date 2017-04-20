@@ -7,6 +7,7 @@ import { sliderWidth, itemWidth } from 'GameCAH/src/styles/SliderEntry.style';
 import SliderEntry from 'GameCAH/src/components/SliderEntry';
 import styles from 'GameCAH/src/styles/index.style';
 import styles1 from 'GameCAH/src/styles/SliderEntry.style';
+import homejs from '../Home'
 import { ENTRIES1, ENTRIES2 } from 'GameCAH/src/static/entries';
 
 import firebase from '../firebase';

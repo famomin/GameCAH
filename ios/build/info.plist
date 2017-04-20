@@ -3,7 +3,15 @@
 <plist version="1.0">
 <dict>
 	<key>LastAccessedDate</key>
+<<<<<<< HEAD
 	<date>2017-04-20T00:58:10Z</date>
+=======
+<<<<<<< HEAD
+	<date>2017-04-19T23:36:19Z</date>
+=======
+	<date>2017-04-19T23:33:07Z</date>
+>>>>>>> ff97b654abaf1258b68c31e0855fa45d5a1b4a91
+>>>>>>> 5170b6653ff89cc177ce7a27dea7b425132c486a
 	<key>WorkspacePath</key>
 	<string>/Users/AzimMomin/Desktop/CodingBootCamp/Project-3/GameCAH/ios/GameCAH.xcodeproj</string>
 </dict>
