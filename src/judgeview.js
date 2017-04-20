@@ -15,12 +15,15 @@ import firebase from '../firebase';
 var rootRef = firebase.ref();
 
 export default class GameCAH extends Component {
-    constructor(props) {
-        super(props);
-        this.state = { 
-            pwc: null,
-        }
-    }
+  constructor(props) {
+          super(props);
+          this.state = {
+              playerName: Home.playerName,
+          }
+      }
+  // static propTypes = {
+  //     playerName: PropTypes.string.isRequired,
+  // };
 
     getSlides (entries) {
         if (!entries) {
@@ -97,9 +100,9 @@ export default class GameCAH extends Component {
               </Carousel>
         );
     }*/
-    
+
     render () {
-        let playedName = this.state.playerName;
+        let playerName = this.state.playerName;
         const { title, subtitle, illustration, even } = this.props;
 
         const uppercaseTitle = title ? (
@@ -115,8 +118,7 @@ export default class GameCAH extends Component {
                 <Row size={5}></Row>
                 <Row size={10}>
                     <Col>
-                        <Text style={styles1.topGameBar}>Name</Text>
-                        <Text>{playedName}</Text>
+                        <Text style={styles1.topGameBar}>{(`'${playerName}'`)}</Text>
                     </Col>
 
                     <Col>
@@ -149,7 +151,7 @@ export default class GameCAH extends Component {
                         indicatorStyle={'white'}
                         scrollEventThrottle={200}
                     >
-                    { this.example1 }  
+                    { this.example1 }
                     </ScrollView>
 
                 </Row>

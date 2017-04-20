@@ -18,7 +18,7 @@ export default class GameCAH extends Component {
 
     constructor(props, context) {
         super(props, context);
-        this.state = { 
+        this.state = {
             wc: null,
         }
         this._carousel = 0;

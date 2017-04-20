@@ -15,7 +15,7 @@ import firebase from './firebase';
 var rootRef = firebase.ref();
 
  export default class Home extends Component {
-   
+
    constructor(props) {
     super(props);
     this.state = {
@@ -48,51 +48,51 @@ var rootRef = firebase.ref();
           USEDwhiteCards: [
           {
               "title":"USEDwCard",
-            
+
           },
           {
               "title":"USEDwCard",
-            
+
           },
           {
               "title":"USEDwCard",
-            
+
           },
           {
               "title":"USEDwCard",
-            
+
           },
           {
               "title":"USEDwCard",
-            
+
           }],
           USEDblackCards: [
           {
               "title":"USEDbCard",
-            
+
           },
           {
               "title":"USEDbCard",
-            
+
           },
           {
               "title":"USEDbCard",
-            
+
           },
           {
               "title":"USEDbCard",
-            
+
           },
           {
               "title":"USEDbCard",
-            
+
           }],
           playedCards:[
             {
               "title": "some card"
             }
           ]
-          
+
         }
       });
     }
@@ -255,7 +255,7 @@ var rootRef = firebase.ref();
        );
      }
    }
-   
+
 
 // rootRef.on("value", function(snapshot){
 //     console.log(snapshot.val().blackCards)
