@@ -132,14 +132,14 @@ export default class GameCAH extends Component {
             });
         });
 
-                    firebase.ref('/Room1/allPlayers/').once('value').then((snapshot) => {
-                      index = snapshot.val();
-                      console.log('index length' + index.numChildren);
-                      console.log('index value' + index.toJSON());
-                      this.setState({
-                        index: index
-                      });
-                    });
+        firebase.ref('/Room1/allPlayers/').once('value').then((snapshot) => {
+          index = snapshot.val();
+          console.log('index length' + snapshot.numChildren());
+          console.log('index value: ' + snapshot.toJSON());
+          this.setState({
+            index: index
+          });
+        });
     }
 
     render() {
