@@ -20,25 +20,32 @@ export default class GameCAH extends Component {
         super(props, context);
         this.state = { 
             wc: null,
+            bc: null,
         }
         this._carousel = 0;
     }
 
   press(Page) {
-    if(Page === 'JudgeView'){
-       this.props.navigator.push({
-         id: 7,
-       });
-    }
+    // if(Page === 'JudgeView'){
+    //    this.props.navigator.push({
+    //      id: 7,
+    //    });
+    // }
     var carouselIndex = this._carousel.currentIndex
     console.log(carouselIndex);
-    this.updateCard();
+    this.updateCard(carouselIndex);
     //console.log(this.context.name);
   }
 
-  updateCard() {
+  updateCard(card) {
     rootRef.on("value", function(snapshot){
-        console.log(snapshot.val().Room1.allPlayers);
+        console.log(snapshot.val().Room1.allPlayers.faras.player.cards[card]);
+        var submitCard = snapshot.val().Room1.allPlayers.faras.player.cards[card];
+
+        rootRef.update({
+            
+        })
+
     });
   }
 
@@ -84,12 +91,15 @@ export default class GameCAH extends Component {
     componentWillMount() {
         rootRef.once("value").then((snapshot) => {
             //wc = snapshot.val().Room1.allPlayers.child("azim");
-            wc = snapshot.val().whiteCards;
-            //console.log("wc in firebaseWVC" + wc);
+            wc = snapshot.val().Room1.allPlayers.faras.player.cards;
+            bc = snapshot.val().blackCards[0].title;
+            console.log("bc in firebaseWVC" + bc);
             this.setState({
                 wc: wc,
+                bc: bc,
             });
         });
+
     }
 
     /*get example2 () {
@@ -115,6 +125,7 @@ export default class GameCAH extends Component {
     }*/
 
     render () {
+        let bc = this.state.bc;
         const { title, subtitle, illustration, even } = this.props;
 
         const uppercaseTitle = title ? (
@@ -144,7 +155,7 @@ export default class GameCAH extends Component {
 
                 <Row size={35} style={styles1.centerC}>
                     <View style={styles1.singleCard}>
-                        <Text style={styles1.whiteTitle}>Hello</Text>
+                        <Text style={styles1.whiteTitle}>{(`'${bc}'`)}</Text>
                     </View>
                 </Row>
 

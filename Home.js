@@ -112,15 +112,17 @@ var rootRef = firebase.ref();
           name: pname,
           score: 0,
           judge: false,
-          cards: {
-            "1": "playerCard1",
-            "2": "playerCard2",
-            "3": "playerCard3",
-            // "4": "playerCard4",
-            // "5": "playerCard5",
-            // "6": "playerCard6",
-            // "7": "playerCard7",
-          }
+          cards: [
+            {
+              "title": "playerCard1"
+            },
+            {
+              "title": "playerCard2"
+            },
+            {
+              "title": "playerCard3"
+            },
+          ]
         },
       //title: playerName
     },
