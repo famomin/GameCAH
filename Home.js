@@ -100,16 +100,16 @@ export default class Home extends Component {
     }
   }
 
-  playerIndex() {
-    firebase.ref('/Room1/allPlayers/').once('value').then((snapshot) => {
-      index = snapshot.val();
-      console.log('index length' + index.length);
-      console.log('index value' + index);
-      this.setState({
-        index: index
-      });
-    });
-  }
+  //playerIndex() {
+    // firebase.ref('/Room1/allPlayers/').once('value').then((snapshot) => {
+    //   index = snapshot.val();
+    //   console.log('index length' + index.length);
+    //   console.log('index value' + index);
+    //   this.setState({
+    //     index: index
+    //   });
+    // });
+//  }
 
   addplayer(pname) {
     var playerArray = 0;
@@ -135,17 +135,7 @@ export default class Home extends Component {
         ]
       },
       //title: playerName
-    }).then(() => {
-      this.playerIndex();
-      let index = this.state.index;
-      if (index == 0) {
-        //this.UpdateJudge();
-        this.press('JudgeView');
-      }
-      else () => {
-        this.press('CardSlider');
-      }
-    });
+    }).then(() => this.press('CardSlider'));
   }
 
   getRef() {
@@ -234,6 +224,17 @@ export default class Home extends Component {
   componentDidMount() {
     this.listenForItems(this.itemsRef);
   }
+
+  // componentWillMount() {
+  //   firebase.ref('/Room1/allPlayers/').once('value').then((snapshot) => {
+  //     index = snapshot.val();
+  //     console.log('index length' + index.length);
+  //     console.log('index value' + index);
+  //     this.setState({
+  //       index: index
+  //     });
+  //   });
+  //}
 
   listenForItems(itemsRef) {
     itemsRef.on('value', (snap) => {

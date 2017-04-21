@@ -38,7 +38,7 @@ export default class GameCAH extends Component {
         this.updateCard(carouselIndex);
     }
 
-   
+
 
     updateCard(card) {
 
@@ -122,6 +122,7 @@ export default class GameCAH extends Component {
             this.setState({
                 wc: wc
             });
+
         });
 
         firebase.ref('/blackCards').once('value').then((snapshot) => {
@@ -130,6 +131,15 @@ export default class GameCAH extends Component {
                 bc: bc
             });
         });
+
+                    firebase.ref('/Room1/allPlayers/').once('value').then((snapshot) => {
+                      index = snapshot.val();
+                      console.log('index length' + index.numChildren);
+                      console.log('index value' + index.toJSON());
+                      this.setState({
+                        index: index
+                      });
+                    });
     }
 
     render() {
