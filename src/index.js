@@ -27,18 +27,31 @@ export default class GameCAH extends Component {
         this.playerName = null;
     }
 
+
     press(Page) {
         if (Page === 'JudgeView') {
             this.props.navigator.push({
                 id: 7,
             });
         }
+
         var carouselIndex = this._carousel.currentIndex
         console.log(carouselIndex);
         this.updateCard(carouselIndex);
     }
 
+    updateJudge() {
 
+        firebase.ref('/Room1/allPlayers/').once('value').then((snapshot) => {
+            //object of the card that is being clicked on
+            // var playerJudge = snapshot.val()[0];
+            // console.log("First Player " + playerJudge);
+
+            rootRef.child('/Room1/allPlayers/faras/player').update({
+                 'judge': true,
+            }).then(() => this.press('JudgeView'))
+        });
+    }
 
     updateCard(card) {
 
@@ -116,6 +129,7 @@ export default class GameCAH extends Component {
 
     async componentWillMount() {
         await this.getPlayerName();
+        await this.updateJudge();
 
         firebase.ref('/Room1/allPlayers/' + this.playerName + '/player/cards').once('value').then((snapshot) => {
             wc = snapshot.val();
@@ -135,7 +149,7 @@ export default class GameCAH extends Component {
         firebase.ref('/Room1/allPlayers/').once('value').then((snapshot) => {
           index = snapshot.val();
           console.log('index length' + snapshot.numChildren());
-          console.log('index value: ' + snapshot.toJSON());
+          console.log('index value: ' + index.numChildren());
           this.setState({
             index: index
           });

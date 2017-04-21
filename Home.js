@@ -100,6 +100,18 @@ export default class Home extends Component {
     }
   }
 
+  // updateJudge() {
+  //
+  //     firebase.ref('/Room1/allPlayers/').once('value').then((snapshot) => {
+  //         //object of the card that is being clicked on
+  //         var playerJudge = snapshot.val()[0];
+  //         console.log("First Player " + playerJudge);
+  //
+  //         rootRef.child('/Room1/allPlayers/faras/player').update({
+  //              'judge': true,
+  //         }).then(() => this.press('JudgeView'))
+  //     });
+  // }
   //playerIndex() {
     // firebase.ref('/Room1/allPlayers/').once('value').then((snapshot) => {
     //   index = snapshot.val();
@@ -224,6 +236,10 @@ export default class Home extends Component {
   componentDidMount() {
     this.listenForItems(this.itemsRef);
   }
+
+  // componentWillMount() {
+  //   this.updateJudge();
+  // }
 
   // componentWillMount() {
   //   firebase.ref('/Room1/allPlayers/').once('value').then((snapshot) => {
