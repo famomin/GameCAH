@@ -20,6 +20,7 @@ export default class GameCAH extends Component {
         super(props);
         this.state = {
             wc: null,
+            bc: null,
         }
         this._carousel = 0;
         this.playerName = null;
@@ -36,9 +37,15 @@ export default class GameCAH extends Component {
         this.updateCard();
     }
 
-    updateCard() {
+    updateCard(card) {
         rootRef.on("value", function (snapshot) {
-            console.log(snapshot.val().Room1.allPlayers);
+            console.log(snapshot.val().Room1.allPlayers.faras.player.cards[card]);
+            var submitCard = snapshot.val().Room1.allPlayers.faras.player.cards[card];
+
+            rootRef.update({
+
+            })
+
         });
     }
 
@@ -89,10 +96,12 @@ export default class GameCAH extends Component {
         this.getPlayerName();
         rootRef.once("value").then((snapshot) => {
             //wc = snapshot.val().Room1.allPlayers.child("azim");
-            wc = snapshot.val().whiteCards;
+            wc = snapshot.val().Room1.allPlayers.michelle.player.cards;
+            bc = snapshot.val().blackCards[0].title;
             //console.log("wc in firebaseWVC" + wc);
             this.setState({
                 wc: wc,
+                bc: bc,
             });
         });
     }
@@ -120,6 +129,7 @@ export default class GameCAH extends Component {
     }*/
 
     render() {
+        let bc = this.state.bc;
         const { title, subtitle, illustration, even } = this.props;
 
         const uppercaseTitle = title ? (
@@ -149,7 +159,7 @@ export default class GameCAH extends Component {
 
                 <Row size={35} style={styles1.centerC}>
                     <View style={styles1.singleCard}>
-                        <Text style={styles1.whiteTitle}>Hello</Text>
+                        <Text style={styles1.whiteTitle}>{(`'${bc}'`)}</Text>
                     </View>
                 </Row>
 
