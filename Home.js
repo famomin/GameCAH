@@ -129,10 +129,8 @@
             },
           //title: playerName
         },
-<<<<<<< HEAD
         this.press('CardSlider'))
       }
-=======
       //title: playerName
     }).then(() => this.press('CardSlider'));
   }
@@ -168,7 +166,6 @@
           id: 5,
         });
      }
->>>>>>> bfdc475a6867f65ba4d76ecb2c43e1c35293a8e6
 
       getRef() {
         return firebase.ref();
