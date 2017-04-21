@@ -38,6 +38,8 @@ export default class GameCAH extends Component {
         this.updateCard(carouselIndex);
     }
 
+   
+
     updateCard(card) {
 
         firebase.ref('/Room1/allPlayers/' + this.playerName + '/player/cards').once('value').then((snapshot) => {
