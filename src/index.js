@@ -35,26 +35,36 @@ export default class GameCAH extends Component {
         }
         var carouselIndex = this._carousel.currentIndex
         console.log(carouselIndex);
-        this.updateCard();
+        this.updateCard(carouselIndex);
     }
 
     updateCard(card) {
-        let playerName = this.playerName;
-        firebase.ref('/Room1/allPlayers/' + playerName + '/player/cards').once('value').then(function (snapshot) {
-            var name = playerName;
-            console.log(snapshot.val());
-            console.log("player name " + name);
+
+        firebase.ref('/Room1/allPlayers/' + this.playerName + '/player/cards').once('value').then((snapshot) => {
+            //object of the card that is being clicked on
+            var submitCard = snapshot.val()[card];
+            console.log("submit card: " + submitCard);
+
+            rootRef.child('/Room1/playedCards').update({
+                 "nickname": "Amazing Grace",
+            })
         });
 
-        rootRef.on("value", function (snapshot) {
-            console.log(snapshot.val().Room1.allPlayers.michelle.player.cards[card]);
-            //var submitCard = snapshot.val().Room1.allPlayers.faras.player.cards[card];
+        // firebase.ref('/Room1/allPlayers/' + playerName + '/player/cards').once('value').then(function (snapshot) {
+        //     var name = playerName;
+        //     console.log(snapshot.val());
+        //     console.log("player name " + name);
+        // });
 
-            // rootRef.update({
+        // rootRef.on("value", function (snapshot) {
+        //     console.log(snapshot.val().Room1.allPlayers.michelle.player.cards[card]);
+        //     //var submitCard = snapshot.val().Room1.allPlayers.faras.player.cards[card];
 
-            // })
+        //     // rootRef.update({
 
-        });
+        //     // })
+
+        // });
     }
 
     getSlides(entries) {
