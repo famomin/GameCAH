@@ -128,8 +128,7 @@ var rootRef = firebase.ref();
           ]
         },
       //title: playerName
-    },
-    this.press('CardSlider'))
+    }).then(() => this.press('CardSlider'));
   }
 
   getRef() {
