@@ -5,7 +5,7 @@
  */
 
 import React, { Component, PropTypes } from 'react';
-import { AppRegistry, StyleSheet, Modal, Image, Platform, Navigator, TouchableHighlight, AlertIOS, ListView } from 'react-native';
+import { AppRegistry, AsyncStorage, StyleSheet, Modal, Image, Platform, Navigator, TouchableHighlight, AlertIOS, ListView } from 'react-native';
 import { Spinner, Text, View, Content, Container, Header, Title, Button, Icon, InputGroup, ListItem, List, Radio, CheckBox, Thumbnail, Card, CardItem, H3, Form, Item, Input } from 'native-base';
 import { Col, Row, Grid } from 'react-native-easy-grid';
 //import * as firebase from 'firebase';
@@ -97,13 +97,16 @@ var rootRef = firebase.ref();
       });
     }
 
-    getChildContext() {
-      return {
-        name: 'azimMomin',
-      }
+  async storePlayerName(name) {
+    try {
+      var test = AsyncStorage.setItem('playerName', name);
+    } catch(error) {
+      console.log('error');
     }
+  }
 
   addplayer(pname) {
+    this.storePlayerName(pname);
     //console.log("text: " + text)
     this.itemsRef.child("allPlayers").child(pname).set({
       //roomfull: false,
@@ -292,7 +295,3 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
 });
-
-Home.childContextTypes = {
-  name: PropTypes.string,
-}

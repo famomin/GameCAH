@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import { View, ScrollView, Text, StatusBar } from 'react-native';
+import { View, ScrollView, Text, StatusBar, AsyncStorage } from 'react-native';
 import Carousel from 'react-native-snap-carousel';
 import { Button, Footer, Container, Content } from 'native-base';
 import { Col, Row, Grid } from 'react-native-easy-grid';
@@ -16,33 +16,33 @@ var rootRef = firebase.ref();
 
 export default class GameCAH extends Component {
 
-    constructor(props, context) {
-        super(props, context);
+    constructor(props) {
+        super(props);
         this.state = {
             wc: null,
         }
         this._carousel = 0;
+        this.playerName = null;
     }
 
-  press(Page) {
-    if(Page === 'JudgeView'){
-       this.props.navigator.push({
-         id: 7,
-       });
+    press(Page) {
+        if (Page === 'JudgeView') {
+            this.props.navigator.push({
+                id: 7,
+            });
+        }
+        var carouselIndex = this._carousel.currentIndex
+        console.log(carouselIndex);
+        this.updateCard();
     }
-    var carouselIndex = this._carousel.currentIndex
-    console.log(carouselIndex);
-    this.updateCard();
-    //console.log(this.context.name);
-  }
 
-  updateCard() {
-    rootRef.on("value", function(snapshot){
-        console.log(snapshot.val().Room1.allPlayers);
-    });
-  }
+    updateCard() {
+        rootRef.on("value", function (snapshot) {
+            console.log(snapshot.val().Room1.allPlayers);
+        });
+    }
 
-    getSlides (entries) {
+    getSlides(entries) {
         if (!entries) {
             return false;
         }
@@ -50,38 +50,43 @@ export default class GameCAH extends Component {
         return entries.map((entry, index) => {
             return (
                 <SliderEntry
-                  key={`carousel-entry-${index}`}
-                  //Remove below code to force all white cards
-                  //even={(index + 1) % 2 === 0}
-                  {...entry}
+                    key={`carousel-entry-${index}`}
+                    //Remove below code to force all white cards
+                    //even={(index + 1) % 2 === 0}
+                    {...entry}
                 />
             );
         });
     }
 
-    get example1 () {
+    get example1() {
         let wc = this.state.wc;
         return (
             <Carousel
-              ref={(carousel) => { this._carousel = carousel; }}
-              sliderWidth={sliderWidth}
-              itemWidth={itemWidth}
-              firstItem={1}
-              inactiveSlideScale={0.94}
-              inactiveSlideOpacity={0.6}
-              enableMomentum={false}
-              containerCustomStyle={styles.slider}
-              contentContainerCustomStyle={styles.sliderContainer}
-              showsHorizontalScrollIndicator={false}
-              snapOnAndroid={true}
-              removeClippedSubviews={false}
+                ref={(carousel) => { this._carousel = carousel; }}
+                sliderWidth={sliderWidth}
+                itemWidth={itemWidth}
+                firstItem={1}
+                inactiveSlideScale={0.94}
+                inactiveSlideOpacity={0.6}
+                enableMomentum={false}
+                containerCustomStyle={styles.slider}
+                contentContainerCustomStyle={styles.sliderContainer}
+                showsHorizontalScrollIndicator={false}
+                snapOnAndroid={true}
+                removeClippedSubviews={false}
             >
-                { this.getSlides(wc) }
+                {this.getSlides(wc)}
             </Carousel>
         );
     }
 
+    async getPlayerName() {
+        this.playerName = await AsyncStorage.getItem('playerName');
+    }
+
     componentWillMount() {
+        this.getPlayerName();
         rootRef.once("value").then((snapshot) => {
             //wc = snapshot.val().Room1.allPlayers.child("azim");
             wc = snapshot.val().whiteCards;
@@ -114,23 +119,23 @@ export default class GameCAH extends Component {
         );
     }*/
 
-    render () {
+    render() {
         const { title, subtitle, illustration, even } = this.props;
 
         const uppercaseTitle = title ? (
-            <Text style={[styles.title, even ? styles.titleEven : {}]} numberOfLines={2}>{ title.toUpperCase() }</Text>
+            <Text style={[styles.title, even ? styles.titleEven : {}]} numberOfLines={2}>{title.toUpperCase()}</Text>
         ) : false;
 
         return (
             <Grid>
                 <View style={styles.colorsContainer}>
-                        <View style={styles.color1} />
-                        <View style={styles.color2} />
+                    <View style={styles.color1} />
+                    <View style={styles.color2} />
                 </View>
                 <Row size={5}></Row>
                 <Row size={10}>
                     <Col>
-                        <Text style={styles1.topGameBar}>Name</Text>
+                        <Text style={styles1.topGameBar}>{this.playerName}</Text>
                     </Col>
 
                     <Col>
@@ -165,7 +170,7 @@ export default class GameCAH extends Component {
                     >
                         {/*<Text style={styles.title}>Example 1</Text>
                         <Text style={styles.subtitle}>No momentum | Scale | Opacity</Text>*/}
-                        { this.example1 }
+                        {this.example1}
                         {/*<Text style={styles.title}>Example 2</Text>
                         <Text style={styles.subtitle}>Momentum | Autoplay</Text>
                         { this.example2 }*/}
@@ -173,15 +178,11 @@ export default class GameCAH extends Component {
 
                 </Row>
                 <Row size={10} style={styles1.centerC}>
-                <Button full success onPress={() => this.press('JudgeView')}>
-                    <Text>Submit</Text>
-                </Button>
+                    <Button full success onPress={() => this.press('JudgeView')}>
+                        <Text>Submit</Text>
+                    </Button>
                 </Row>
             </Grid>
         );
     }
-}
-
-GameCAH.contextTypes = {
-    name: PropTypes.string,
 }
