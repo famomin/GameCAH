@@ -14,6 +14,7 @@ import firebase from '../firebase';
 
 var rootRef = firebase.ref();
 
+
 export default class GameCAH extends Component {
 
     constructor(props) {
@@ -38,13 +39,20 @@ export default class GameCAH extends Component {
     }
 
     updateCard(card) {
+        let playerName = this.playerName;
+        firebase.ref('/Room1/allPlayers/' + playerName + '/player/cards').once('value').then(function (snapshot) {
+            var name = playerName;
+            console.log(snapshot.val());
+            console.log("player name " + name);
+        });
+
         rootRef.on("value", function (snapshot) {
-            console.log(snapshot.val().Room1.allPlayers.faras.player.cards[card]);
-            var submitCard = snapshot.val().Room1.allPlayers.faras.player.cards[card];
+            console.log(snapshot.val().Room1.allPlayers.michelle.player.cards[card]);
+            //var submitCard = snapshot.val().Room1.allPlayers.faras.player.cards[card];
 
-            rootRef.update({
+            // rootRef.update({
 
-            })
+            // })
 
         });
     }
@@ -94,6 +102,13 @@ export default class GameCAH extends Component {
 
     componentWillMount() {
         this.getPlayerName();
+        // let playerName = this.playerName;
+        // firebase.ref('/Room1/allPlayers/' + playerName + '/player/cards').once('value').then(function (snapshot) {
+        //     var name = playerName;
+        //     console.log(snapshot.val());
+        //     console.log("player name " + name);
+        // });
+
         rootRef.once("value").then((snapshot) => {
             //wc = snapshot.val().Room1.allPlayers.child("azim");
             wc = snapshot.val().Room1.allPlayers.michelle.player.cards;
