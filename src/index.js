@@ -44,11 +44,11 @@ export default class GameCAH extends Component {
 
         firebase.ref('/Room1/allPlayers/' + this.playerName + '/player/cards').once('value').then((snapshot) => {
             //object of the card that is being clicked on
-            var submitCard = snapshot.val()[card];
+            var submitCard = snapshot.val()[card].title;
             console.log("submit card: " + submitCard);
 
-            rootRef.child('/Room1/playedCards').update({
-                 "nickname": "Amazing Grace",
+            rootRef.child('/Room1/playedCards').child(this.playerName).update({
+                 'title': submitCard,
             })
         });
 

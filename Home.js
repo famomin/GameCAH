@@ -87,12 +87,6 @@
                 "title":"USEDbCard",
 
               }],
-              playedCards:[
-              {
-                "title": "some card"
-              }
-              ]
-
             }
           });
       }
@@ -128,11 +122,7 @@
               ]
             },
           //title: playerName
-        },
-        this.press('CardSlider'))
-      }
-      //title: playerName
-    }).then(() => this.press('CardSlider'));
+        }).then(() => this.press('CardSlider'));
   }
 
   getRef() {
@@ -166,40 +156,7 @@
           id: 5,
         });
      }
-
-      getRef() {
-        return firebase.ref();
-      }
-       // The press function takes in an argument (movie name) and pushes to the navigator the individual movie page
-       // It also passes along the name of the movie which will be used fetch information from the OMDB API
-       press(Page) {
-        //  if(Page === 'GamePlay'){
-        //     this.props.navigator.push({
-        //       id: 4,
-        //     });
-        //  }
-        //  else if(Page === 'AllPlayers'){
-        //     this.props.navigator.push({
-        //       id: 3,
-        //     });
-        //  }
-        if(Page === 'CardSlider'){
-          this.props.navigator.push({
-            id: 6,
-          });
-        }
-        else if(Page === 'NewGame'){
-          this.props.navigator.push({
-            id: 2,
-          });
-        }
-        else if(Page === 'JoinGame'){
-          this.props.navigator.push({
-            id: 5,
-          });
-        }
-
-      }
+   }
 
       render() {
        let playerName = this.state.playerName;
@@ -234,8 +191,6 @@
                       </Button>
                       </Row>
 
-
-
                       <Row>
                       <Button onPress={() => this.press('CardSlider')}>
                       <Text>CardSlider</Text>
@@ -245,8 +200,8 @@
                       </Grid>
 
                       </Image>
-                      );
-     }
+                      )
+     };
 
      componentDidMount() {
        this.listenForItems(this.itemsRef);
