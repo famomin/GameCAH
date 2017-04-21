@@ -62,7 +62,10 @@ export default class GameCAH extends Component {
 
             rootRef.child('/Room1/playedCards').child(this.playerName).update({
                  'title': submitCard,
-            })
+            });
+
+            //submitCard.remove();
+            rootRef.child('/Room1/allPlayers/' + this.playerName + '/player/cards/' + card).remove();
         });
 
         // firebase.ref('/Room1/allPlayers/' + playerName + '/player/cards').once('value').then(function (snapshot) {
@@ -129,7 +132,7 @@ export default class GameCAH extends Component {
 
     async componentWillMount() {
         await this.getPlayerName();
-        await this.updateJudge();
+        //await this.updateJudge();
 
         firebase.ref('/Room1/allPlayers/' + this.playerName + '/player/cards').once('value').then((snapshot) => {
             wc = snapshot.val();
