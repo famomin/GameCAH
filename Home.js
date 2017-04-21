@@ -129,8 +129,46 @@
             },
           //title: playerName
         },
+<<<<<<< HEAD
         this.press('CardSlider'))
       }
+=======
+      //title: playerName
+    }).then(() => this.press('CardSlider'));
+  }
+
+  getRef() {
+    return firebase.ref();
+  }
+   // The press function takes in an argument (movie name) and pushes to the navigator the individual movie page
+   // It also passes along the name of the movie which will be used fetch information from the OMDB API
+   press(Page) {
+    //  if(Page === 'GamePlay'){
+    //     this.props.navigator.push({
+    //       id: 4,
+    //     });
+    //  }
+    //  else if(Page === 'AllPlayers'){
+    //     this.props.navigator.push({
+    //       id: 3,
+    //     });
+    //  }
+     if(Page === 'CardSlider'){
+        this.props.navigator.push({
+          id: 6,
+        });
+     }
+     else if(Page === 'NewGame'){
+        this.props.navigator.push({
+          id: 2,
+        });
+     }
+     else if(Page === 'JoinGame'){
+        this.props.navigator.push({
+          id: 5,
+        });
+     }
+>>>>>>> bfdc475a6867f65ba4d76ecb2c43e1c35293a8e6
 
       getRef() {
         return firebase.ref();

@@ -99,51 +99,28 @@ export default class GameCAH extends Component {
     }
 
     async getPlayerName() {
-        this.playerName = await AsyncStorage.getItem('playerName');
-    }
-
-    componentWillMount() {
-        this.getPlayerName();
-        // let playerName = this.playerName;
-        // firebase.ref('/Room1/allPlayers/' + playerName + '/player/cards').once('value').then(function (snapshot) {
-        //     var name = playerName;
-        //     console.log(snapshot.val());
-        //     console.log("player name " + name);
-        // });
-
-        rootRef.once("value").then((snapshot) => {
-            //wc = snapshot.val().Room1.allPlayers.child("azim");
-            wc = snapshot.val().Room1.allPlayers.michelle.player.cards;
-            bc = snapshot.val().blackCards[0].title;
-            //console.log("wc in firebaseWVC" + wc);
-            this.setState({
-                wc: wc,
-                bc: bc,
-            });
+        await AsyncStorage.getItem('playerName', (err, result) => {
+            this.playerName = result;
         });
     }
 
-    /*get example2 () {
-        return (
-            <Carousel
-              sliderWidth={sliderWidth}
-              itemWidth={itemWidth}
-              inactiveSlideScale={1}
-              inactiveSlideOpacity={1}
-              enableMomentum={true}
-              autoplay={true}
-              autoplayDelay={500}
-              autoplayInterval={2500}
-              containerCustomStyle={styles.slider}
-              contentContainerCustomStyle={styles.sliderContainer}
-              showsHorizontalScrollIndicator={false}
-              snapOnAndroid={true}
-              removeClippedSubviews={false}
-              >
-                  { this.getSlides(ENTRIES2) }
-              </Carousel>
-        );
-    }*/
+    async componentWillMount() {
+        await this.getPlayerName();
+
+        firebase.ref('/Room1/allPlayers/' + this.playerName + '/player/cards').once('value').then((snapshot) => {
+            wc = snapshot.val();
+            this.setState({
+                wc: wc
+            });
+        });
+
+        firebase.ref('/blackCards').once('value').then((snapshot) => {
+            bc = snapshot.val()[0].title;
+            this.setState({
+                bc: bc
+            });
+        });
+    }
 
     render() {
         let bc = this.state.bc;
