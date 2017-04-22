@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { View, Image, StyleSheet } from 'react-native';
-import cahImg from './images/c.png';
+import cahImg from './images/cah.png';
 
 export default class Splash extends Component {
 

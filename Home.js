@@ -138,13 +138,13 @@ export default class Home extends Component {
         judge: false,
         cards: [
           {
-            "title": "Blowing some dudes in an alley."
+            "title": "Two midgets shitting into a bucket."
           },
           {
-            "title": "flying sex snakes"
+            "title": "The KKK"
           },
           {
-            "title": "German dungean porn."
+            "title": "An erection that lasts longer than four hours."
           },
         ]
       },
