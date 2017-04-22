@@ -14,6 +14,8 @@ import firebase from './firebase';
 
 var rootRef = firebase.ref();
 
+var cardRef = [];
+
 export default class Home extends Component {
 
   constructor(props) {
@@ -136,13 +138,13 @@ export default class Home extends Component {
         judge: false,
         cards: [
           {
-            "title": "playerCard1"
+            "title": "Blowing some dudes in an alley."
           },
           {
-            "title": "playerCard2"
+            "title": "flying sex snakes"
           },
           {
-            "title": "playerCard3"
+            "title": "German dungean porn."
           },
         ]
       },
@@ -272,7 +274,7 @@ export default class Home extends Component {
     });
   }
 
-  _addItem() {
+_addItem() {
     AlertIOS.prompt(
       'Enter Your Name',
       null,
@@ -285,21 +287,30 @@ export default class Home extends Component {
             this.setState({
               playerName: playerName,
             })
-            rootRef.once("value").then((snapshot) => {
-              for (var i = 0; i < 3; i++) {
-                console.log(this);
-                //this.itemRef = this.getRef().child('/Room1/allPlayers/michelle/player/cards');
-                //this.itemRef[i].update({
-                //"title":snapshot.val().whiteCards[i].title
-              }
-            })
+            // firebase.ref('/whiteCards').once('value').then((snapshot) => {
+            //   for (var i = 0; i < 3; i++) {
+            //     cardRef[i] = snapshot.val()[i].title;
+            //     console.log(cardRef);
+            //   }
+            // })
+            // for (var i = 0; i<3; i++) {
+            //   var cardposition = 'cards['+i+']';
+            //     firebase.ref('/Room1/allPlayers/'+playerName+'/player/cards/').val()[i].update({
+            //         title: cardRef[i]
+            //
+            //     })
+            //
+            // }
+
+
+
             //this.firstButtonPress.bind(this);
           }
         },
       ],
       'plain-text'
     );
-  }
+}
 }
 
 
