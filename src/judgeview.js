@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import { View, ScrollView, Text, StatusBar } from 'react-native';
+import { View, ScrollView, Text, StatusBar, AsyncStorage } from 'react-native';
 import Carousel from 'react-native-snap-carousel';
 import { Button, Footer, Container, Content } from 'native-base';
 import { Col, Row, Grid } from 'react-native-easy-grid';
@@ -8,7 +8,7 @@ import SliderEntry from 'GameCAH/src/components/SliderEntry';
 import styles from 'GameCAH/src/styles/index.style';
 import styles1 from 'GameCAH/src/styles/SliderEntry.style';
 import { ENTRIES1, ENTRIES2 } from 'GameCAH/src/static/entries';
-import Home from '../Home';
+import homejs from '../Home'
 
 import firebase from '../firebase';
 
@@ -18,8 +18,9 @@ export default class GameCAH extends Component {
   constructor(props) {
           super(props);
           this.state = {
-              playerName: Home.playerName,
+              pwc: null,
           }
+          this.playerName = null;
       }
   // static propTypes = {
   //     playerName: PropTypes.string.isRequired,
@@ -65,18 +66,29 @@ export default class GameCAH extends Component {
         );
     }
 
-    componentWillMount() {
-        rootRef.once("value").then((snapshot) => {
-            pwc = snapshot.val().Room1.playedCards;
-            console.log("pwc in firebaseWVC" + pwc);
-            this.setState({
-                pwc: pwc,
-            });
+    async getPlayerName() {
+        await AsyncStorage.getItem('playerName', (err, result) => {
+            this.playerName = result;
         });
-        const playerName = this.props.playerName;
-        this.setState({
-            playerName: playerName,
-        })
+    }
+
+    async componentWillMount() {
+      await this.getPlayerName();
+
+        // rootRef.once("value").then((snapshot) => {
+        //     pwc = snapshot.val().Room1.playedCards;
+        //     console.log("pwc in firebaseWVC" + pwc);
+        //     this.setState({
+        //         pwc: pwc,
+        //     });
+        // });
+        firebase.ref('/Room1/playedCards').once(this.playerName).then((snapshot) => {
+            pwc = snapshot.val();
+            this.setState({
+                pwc: pwc
+            });
+
+        });
     }
 
     /*get example2 () {
@@ -102,7 +114,6 @@ export default class GameCAH extends Component {
     }*/
 
     render () {
-        let playerName = this.state.playerName;
         const { title, subtitle, illustration, even } = this.props;
 
         const uppercaseTitle = title ? (
@@ -118,7 +129,7 @@ export default class GameCAH extends Component {
                 <Row size={5}></Row>
                 <Row size={10}>
                     <Col>
-                        <Text style={styles1.topGameBar}>{(`'${playerName}'`)}</Text>
+                        <Text style={styles1.topGameBar}>{this.playerName}</Text>
                     </Col>
 
                     <Col>
