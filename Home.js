@@ -141,10 +141,10 @@ export default class Home extends Component {
             "title": "Two midgets shitting into a bucket."
           },
           {
-            "title": "The KKK"
+            "title": "An erection that lasts longer than four hours."
           },
           {
-            "title": "An erection that lasts longer than four hours."
+            "title": "The KKK"
           },
         ]
       },

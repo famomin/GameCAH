@@ -19,7 +19,9 @@ export default class GameCAH extends Component {
           super(props);
           this.state = {
               pwc: null,
+              bc: null,
           }
+          this._carousel = 0;
           this.playerName = null;
       }
   // static propTypes = {
@@ -82,12 +84,19 @@ export default class GameCAH extends Component {
         //         pwc: pwc,
         //     });
         // });
-        firebase.ref('/Room1/playedCards').once(this.playerName).then((snapshot) => {
+        firebase.ref('/Room1/playedCards/faras').once(this.playerName).then((snapshot) => {
             pwc = snapshot.val();
+            console.log(pwc);
             this.setState({
                 pwc: pwc
             });
 
+        });
+        firebase.ref('/blackCards').once('value').then((snapshot) => {
+            bc = snapshot.val()[0].title;
+            this.setState({
+                bc: bc
+            });
         });
     }
 
@@ -114,6 +123,8 @@ export default class GameCAH extends Component {
     }*/
 
     render () {
+      let bc = this.state.bc;
+
         const { title, subtitle, illustration, even } = this.props;
 
         const uppercaseTitle = title ? (
@@ -143,7 +154,7 @@ export default class GameCAH extends Component {
 
                 <Row size={35} style={styles1.centerC}>
                     <View style={styles1.singleCard}>
-                        <Text style={styles1.whiteTitle}>Hello</Text>
+                        <Text style={styles1.whiteTitle}>{(`'${bc}'`)}</Text>
                     </View>
                 </Row>
 
